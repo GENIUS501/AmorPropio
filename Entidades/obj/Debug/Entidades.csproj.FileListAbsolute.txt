@@ -1,0 +1,6 @@
+C:\Users\Dell\source\repos\Lienzos-Git\Lienzos\Entidades\bin\Debug\Entidades.dll
+C:\Users\Dell\source\repos\Lienzos-Git\Lienzos\Entidades\bin\Debug\Entidades.pdb
+C:\Users\Dell\source\repos\Lienzos-Git\Lienzos\Entidades\obj\Debug\Entidades.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\Lienzos-Git\Lienzos\Entidades\obj\Debug\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Lienzos-Git\Lienzos\Entidades\obj\Debug\Entidades.dll
+C:\Users\Dell\source\repos\Lienzos-Git\Lienzos\Entidades\obj\Debug\Entidades.pdb
