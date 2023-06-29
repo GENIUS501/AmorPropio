@@ -36,6 +36,9 @@
             this.txt_id_perfil = new System.Windows.Forms.TextBox();
             this.Lbl_Perfil = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.chb_devoluciones = new System.Windows.Forms.CheckBox();
+            this.chb_ventas = new System.Windows.Forms.CheckBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.chb_Clientes_reporte = new System.Windows.Forms.CheckBox();
             this.chb_venta_reporte = new System.Windows.Forms.CheckBox();
@@ -75,11 +78,10 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.chb_ventas = new System.Windows.Forms.CheckBox();
-            this.chb_devoluciones = new System.Windows.Forms.CheckBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.grp_usuarios.SuspendLayout();
             this.grp_Tipo_Producto.SuspendLayout();
@@ -87,7 +89,7 @@
             this.grp_clientes.SuspendLayout();
             this.grp_roles.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
-            this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -155,6 +157,37 @@
             this.groupBox2.TabIndex = 20;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Datos de permisos";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.chb_devoluciones);
+            this.groupBox3.Controls.Add(this.chb_ventas);
+            this.groupBox3.Location = new System.Drawing.Point(242, 203);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(123, 130);
+            this.groupBox3.TabIndex = 30;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Procesos";
+            // 
+            // chb_devoluciones
+            // 
+            this.chb_devoluciones.AutoSize = true;
+            this.chb_devoluciones.Location = new System.Drawing.Point(7, 57);
+            this.chb_devoluciones.Name = "chb_devoluciones";
+            this.chb_devoluciones.Size = new System.Drawing.Size(91, 17);
+            this.chb_devoluciones.TabIndex = 37;
+            this.chb_devoluciones.Text = "Devoluciones";
+            this.chb_devoluciones.UseVisualStyleBackColor = true;
+            // 
+            // chb_ventas
+            // 
+            this.chb_ventas.AutoSize = true;
+            this.chb_ventas.Location = new System.Drawing.Point(7, 23);
+            this.chb_ventas.Name = "chb_ventas";
+            this.chb_ventas.Size = new System.Drawing.Size(59, 17);
+            this.chb_ventas.TabIndex = 36;
+            this.chb_ventas.Text = "Ventas";
+            this.chb_ventas.UseVisualStyleBackColor = true;
             // 
             // groupBox5
             // 
@@ -577,36 +610,15 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // groupBox3
+            // pictureBox1
             // 
-            this.groupBox3.Controls.Add(this.chb_devoluciones);
-            this.groupBox3.Controls.Add(this.chb_ventas);
-            this.groupBox3.Location = new System.Drawing.Point(242, 203);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(123, 130);
-            this.groupBox3.TabIndex = 30;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Procesos";
-            // 
-            // chb_ventas
-            // 
-            this.chb_ventas.AutoSize = true;
-            this.chb_ventas.Location = new System.Drawing.Point(7, 23);
-            this.chb_ventas.Name = "chb_ventas";
-            this.chb_ventas.Size = new System.Drawing.Size(59, 17);
-            this.chb_ventas.TabIndex = 36;
-            this.chb_ventas.Text = "Ventas";
-            this.chb_ventas.UseVisualStyleBackColor = true;
-            // 
-            // chb_devoluciones
-            // 
-            this.chb_devoluciones.AutoSize = true;
-            this.chb_devoluciones.Location = new System.Drawing.Point(7, 57);
-            this.chb_devoluciones.Name = "chb_devoluciones";
-            this.chb_devoluciones.Size = new System.Drawing.Size(91, 17);
-            this.chb_devoluciones.TabIndex = 37;
-            this.chb_devoluciones.Text = "Devoluciones";
-            this.chb_devoluciones.UseVisualStyleBackColor = true;
+            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Logop;
+            this.pictureBox1.Location = new System.Drawing.Point(464, -3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(128, 110);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 74;
+            this.pictureBox1.TabStop = false;
             // 
             // Mantenimiento_Roles
             // 
@@ -614,6 +626,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(600, 504);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox2);
@@ -626,6 +639,8 @@
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.grp_usuarios.ResumeLayout(false);
@@ -639,8 +654,7 @@
             this.grp_roles.ResumeLayout(false);
             this.grp_roles.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -695,5 +709,6 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.CheckBox chb_devoluciones;
         private System.Windows.Forms.CheckBox chb_ventas;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

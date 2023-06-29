@@ -41,8 +41,10 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.txt_buscar_id_rol = new System.Windows.Forms.MaskedTextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dat_principal)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // dat_principal
@@ -173,11 +175,22 @@
             this.txt_nombre.Size = new System.Drawing.Size(100, 20);
             this.txt_nombre.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Logop;
+            this.pictureBox1.Location = new System.Drawing.Point(499, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(255, 199);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 87;
+            this.pictureBox1.TabStop = false;
+            // 
             // ListaRolesyPermisos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(765, 422);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dat_principal);
             this.Controls.Add(this.btn_consultar);
             this.Controls.Add(this.btn_eliminar);
@@ -190,6 +203,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dat_principal)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -207,5 +221,6 @@
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.MaskedTextBox txt_buscar_id_rol;
         private System.Windows.Forms.TextBox txt_nombre;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

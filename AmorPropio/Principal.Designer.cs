@@ -80,7 +80,7 @@
             // reingresarToolStripMenuItem
             // 
             this.reingresarToolStripMenuItem.Name = "reingresarToolStripMenuItem";
-            this.reingresarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.reingresarToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
             this.reingresarToolStripMenuItem.Text = "Reingresar";
             this.reingresarToolStripMenuItem.Click += new System.EventHandler(this.reingresarToolStripMenuItem_Click);
             // 
@@ -224,6 +224,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Lienzos.Properties.Resources.LogoGrande;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);

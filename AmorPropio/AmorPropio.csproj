@@ -135,6 +135,9 @@
     <EmbeddedResource Include="Mantenimiento_Roles.resx">
       <DependentUpon>Mantenimiento_Roles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Mantenimiento_Tipos_Producto.resx">
+      <DependentUpon>Mantenimiento_Tipos_Producto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Mantenimiento_Usuarios.resx">
       <DependentUpon>Mantenimiento_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -149,6 +152,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -165,6 +169,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Imagenes\Logop.png" />
+    <Content Include="Imagenes\LogoGrande.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
