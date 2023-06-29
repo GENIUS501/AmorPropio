@@ -84,6 +84,12 @@
     <Compile Include="ListaRolesyPermisos.Designer.cs">
       <DependentUpon>ListaRolesyPermisos.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListarTipoProductos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListarTipoProductos.Designer.cs">
+      <DependentUpon>ListarTipoProductos.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListarUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="ListaRolesyPermisos.resx">
       <DependentUpon>ListaRolesyPermisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarTipoProductos.resx">
+      <DependentUpon>ListarTipoProductos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ListarUsuarios.resx">
       <DependentUpon>ListarUsuarios.cs</DependentUpon>
