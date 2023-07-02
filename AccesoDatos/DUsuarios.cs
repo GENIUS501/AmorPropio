@@ -30,6 +30,7 @@ namespace AccesoDatos
                     Objbd.Genero = obj.Genero;
                     Objbd.Id_Rol = obj.Id_Rol;
                     Objbd.Estado = 1;
+                    Objbd.Correo = obj.Correo;
                     Objbd.Contrasena = obj.Contrasena;
                     db.Entry(Objbd).State = EntityState.Added;
                     int Resultado = db.SaveChanges();
@@ -73,6 +74,7 @@ namespace AccesoDatos
                     Objbd.Segundo_Apellido = obj.Segundo_Apellido;
                     Objbd.Genero = obj.Genero;
                     Objbd.Id_Rol = obj.Id_Rol;
+                    Objbd.Correo = obj.Correo;
                     Objbd.Estado = 1;
                     if (obj.Contrasena == "********")
                     {
@@ -147,7 +149,7 @@ namespace AccesoDatos
                 .Select(x => new EUsuario
                 {
                     ID_Usuario = x.ID_Usuario,
-                    Identificacion=x.Identificacion,
+                    Identificacion = x.Identificacion,
                     Nombre = x.Nombre,
                     Nombre_Usuario = x.Nombre_Usuario,
                     Primer_Apellido = x.Primer_Apellido,
@@ -155,6 +157,7 @@ namespace AccesoDatos
                     Genero = x.Genero,
                     Id_Rol = x.Id_Rol,
                     Estado = x.Estado,
+                    Correo = x.Correo,
                     Contrasena = x.Contrasena
                 }).ToList();
                 return Lista;
@@ -177,7 +180,7 @@ namespace AccesoDatos
                 .Select(x => new EUsuario
                 {
                     ID_Usuario = x.ID_Usuario,
-                    Identificacion=x.Identificacion,
+                    Identificacion = x.Identificacion,
                     Nombre = x.Nombre,
                     Nombre_Usuario = x.Nombre_Usuario,
                     Primer_Apellido = x.Primer_Apellido,
@@ -185,6 +188,7 @@ namespace AccesoDatos
                     Genero = x.Genero,
                     Id_Rol = x.Id_Rol,
                     Estado = x.Estado,
+                    Correo = x.Correo,
                     Contrasena = x.Contrasena
                 }).Where(x => x.Nombre_Usuario == User && x.Contrasena == Pass).FirstOrDefault();
                 return Obj;

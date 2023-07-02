@@ -33,6 +33,12 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_apellido2 = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_apellido1 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbo_Genero = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lbl_cclave = new System.Windows.Forms.Label();
             this.cbo_rol = new System.Windows.Forms.ComboBox();
@@ -46,12 +52,10 @@
             this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label2 = new System.Windows.Forms.Label();
-            this.cbo_Genero = new System.Windows.Forms.ComboBox();
-            this.txt_apellido1 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txt_apellido2 = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_correo = new System.Windows.Forms.TextBox();
+            this.txt_telefono = new System.Windows.Forms.MaskedTextBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +65,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(162, 318);
+            this.btnCancelar.Location = new System.Drawing.Point(162, 350);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(83, 23);
             this.btnCancelar.TabIndex = 16;
@@ -75,7 +79,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAceptar.Location = new System.Drawing.Point(46, 318);
+            this.btnAceptar.Location = new System.Drawing.Point(46, 350);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(79, 23);
             this.btnAceptar.TabIndex = 15;
@@ -86,6 +90,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txt_telefono);
+            this.groupBox1.Controls.Add(this.label11);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Controls.Add(this.txt_correo);
             this.groupBox1.Controls.Add(this.txt_apellido2);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.txt_apellido1);
@@ -106,15 +114,65 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(257, 291);
+            this.groupBox1.Size = new System.Drawing.Size(257, 332);
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Usuario";
             // 
+            // txt_apellido2
+            // 
+            this.txt_apellido2.Location = new System.Drawing.Point(132, 154);
+            this.txt_apellido2.Name = "txt_apellido2";
+            this.txt_apellido2.Size = new System.Drawing.Size(104, 20);
+            this.txt_apellido2.TabIndex = 22;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(129, 138);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(90, 13);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Segundo Apellido";
+            // 
+            // txt_apellido1
+            // 
+            this.txt_apellido1.Location = new System.Drawing.Point(9, 154);
+            this.txt_apellido1.Name = "txt_apellido1";
+            this.txt_apellido1.Size = new System.Drawing.Size(104, 20);
+            this.txt_apellido1.TabIndex = 20;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(6, 138);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.TabIndex = 21;
+            this.label3.Text = "Primer Apellido";
+            // 
+            // cbo_Genero
+            // 
+            this.cbo_Genero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_Genero.FormattingEnabled = true;
+            this.cbo_Genero.Location = new System.Drawing.Point(132, 103);
+            this.cbo_Genero.Name = "cbo_Genero";
+            this.cbo_Genero.Size = new System.Drawing.Size(110, 21);
+            this.cbo_Genero.TabIndex = 19;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(129, 87);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(42, 13);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Genero";
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 242);
+            this.label7.Location = new System.Drawing.Point(6, 288);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 13);
             this.label7.TabIndex = 8;
@@ -123,7 +181,7 @@
             // lbl_cclave
             // 
             this.lbl_cclave.AutoSize = true;
-            this.lbl_cclave.Location = new System.Drawing.Point(139, 242);
+            this.lbl_cclave.Location = new System.Drawing.Point(139, 288);
             this.lbl_cclave.Name = "lbl_cclave";
             this.lbl_cclave.Size = new System.Drawing.Size(108, 13);
             this.lbl_cclave.TabIndex = 9;
@@ -140,7 +198,7 @@
             // 
             // txt_cclave
             // 
-            this.txt_cclave.Location = new System.Drawing.Point(142, 258);
+            this.txt_cclave.Location = new System.Drawing.Point(142, 304);
             this.txt_cclave.Name = "txt_cclave";
             this.txt_cclave.PasswordChar = '*';
             this.txt_cclave.Size = new System.Drawing.Size(100, 20);
@@ -173,7 +231,7 @@
             // 
             // txt_clave
             // 
-            this.txt_clave.Location = new System.Drawing.Point(9, 258);
+            this.txt_clave.Location = new System.Drawing.Point(9, 304);
             this.txt_clave.Name = "txt_clave";
             this.txt_clave.PasswordChar = '*';
             this.txt_clave.Size = new System.Drawing.Size(100, 20);
@@ -216,61 +274,44 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // label2
+            // label8
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(129, 87);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(42, 13);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Genero";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 236);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Correo electronico";
             // 
-            // cbo_Genero
+            // txt_correo
             // 
-            this.cbo_Genero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_Genero.FormattingEnabled = true;
-            this.cbo_Genero.Location = new System.Drawing.Point(132, 103);
-            this.cbo_Genero.Name = "cbo_Genero";
-            this.cbo_Genero.Size = new System.Drawing.Size(110, 21);
-            this.cbo_Genero.TabIndex = 19;
+            this.txt_correo.Location = new System.Drawing.Point(9, 252);
+            this.txt_correo.Name = "txt_correo";
+            this.txt_correo.Size = new System.Drawing.Size(104, 20);
+            this.txt_correo.TabIndex = 24;
             // 
-            // txt_apellido1
+            // txt_telefono
             // 
-            this.txt_apellido1.Location = new System.Drawing.Point(9, 154);
-            this.txt_apellido1.Name = "txt_apellido1";
-            this.txt_apellido1.Size = new System.Drawing.Size(104, 20);
-            this.txt_apellido1.TabIndex = 20;
+            this.txt_telefono.Location = new System.Drawing.Point(142, 252);
+            this.txt_telefono.Mask = "00000000";
+            this.txt_telefono.Name = "txt_telefono";
+            this.txt_telefono.Size = new System.Drawing.Size(100, 20);
+            this.txt_telefono.TabIndex = 26;
             // 
-            // label3
+            // label11
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 138);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 21;
-            this.label3.Text = "Primer Apellido";
-            // 
-            // txt_apellido2
-            // 
-            this.txt_apellido2.Location = new System.Drawing.Point(132, 154);
-            this.txt_apellido2.Name = "txt_apellido2";
-            this.txt_apellido2.Size = new System.Drawing.Size(104, 20);
-            this.txt_apellido2.TabIndex = 22;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(129, 138);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(90, 13);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Segundo Apellido";
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(139, 236);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 13);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Teléfono";
             // 
             // Mantenimiento_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(279, 350);
+            this.ClientSize = new System.Drawing.Size(279, 385);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox1);
@@ -308,5 +349,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbo_Genero;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txt_correo;
+        private System.Windows.Forms.MaskedTextBox txt_telefono;
+        private System.Windows.Forms.Label label11;
     }
 }
