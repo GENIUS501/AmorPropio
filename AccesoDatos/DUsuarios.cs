@@ -32,6 +32,7 @@ namespace AccesoDatos
                     Objbd.Estado = 1;
                     Objbd.Correo = obj.Correo;
                     Objbd.Contrasena = obj.Contrasena;
+                    Objbd.Telefono = obj.Telefono;
                     db.Entry(Objbd).State = EntityState.Added;
                     int Resultado = db.SaveChanges();
                     if (Resultado > 0)
@@ -75,6 +76,7 @@ namespace AccesoDatos
                     Objbd.Genero = obj.Genero;
                     Objbd.Id_Rol = obj.Id_Rol;
                     Objbd.Correo = obj.Correo;
+                    Objbd.Telefono = obj.Telefono;
                     Objbd.Estado = 1;
                     if (obj.Contrasena == "********")
                     {
@@ -158,6 +160,7 @@ namespace AccesoDatos
                     Id_Rol = x.Id_Rol,
                     Estado = x.Estado,
                     Correo = x.Correo,
+                    Telefono = x.Telefono,
                     Contrasena = x.Contrasena
                 }).ToList();
                 return Lista;
@@ -189,6 +192,7 @@ namespace AccesoDatos
                     Id_Rol = x.Id_Rol,
                     Estado = x.Estado,
                     Correo = x.Correo,
+                    Telefono = x.Telefono,
                     Contrasena = x.Contrasena
                 }).Where(x => x.Nombre_Usuario == User && x.Contrasena == Pass).FirstOrDefault();
                 return Obj;

@@ -47,6 +47,7 @@ namespace Lienzos
                         Obj.Genero = int.Parse(this.cbo_Genero.SelectedValue.ToString());
                         Obj.Id_Rol = int.Parse(this.cbo_rol.SelectedValue.ToString());
                         Obj.Correo = this.txt_correo.Text;
+                        Obj.Telefono= int.Parse(this.txt_telefono.Text);
                         //Obj.Correo = this.txt_correo.Text;
                         Obj.Nombre = this.txt_nombre.Text;
                         Int32 FilasAfectadas = 0;
