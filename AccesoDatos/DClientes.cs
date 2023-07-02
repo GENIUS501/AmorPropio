@@ -26,7 +26,10 @@ namespace AccesoDatos
                     Objbd.Nombre = obj.Nombre;
                     Objbd.Primer_Apellido = obj.Primer_Apellido;
                     Objbd.Segundo_Apellido = obj.Segundo_Apellido;
-                   // Objbd.Genero = obj.Genero;
+                    Objbd.Correo = obj.Correo;
+                    Objbd.Direccion = obj.Direccion;
+                    Objbd.Telefono = obj.Telefono;
+                    // Objbd.Genero = obj.Genero;
                     db.Tab_Clientes.Add(Objbd);
 
                     int Resultado = db.SaveChanges();
@@ -68,7 +71,9 @@ namespace AccesoDatos
                     Nombre = x.Nombre,
                     Primer_Apellido = x.Primer_Apellido,
                     Segundo_Apellido = x.Segundo_Apellido,
-                  //  Genero = x.Genero,
+                    Correo = x.Correo,
+                    Direccion = x.Direccion,
+                    Telefono = x.Telefono,
                     ID_Cliente = x.ID_Cliente
                 }).ToList();
                 return Lista;
@@ -93,7 +98,10 @@ namespace AccesoDatos
                     Objbd.Nombre = obj.Nombre;
                     Objbd.Primer_Apellido = obj.Primer_Apellido;
                     Objbd.Segundo_Apellido = obj.Segundo_Apellido;
-                   // Objbd.Genero = obj.Genero;
+                    Objbd.Correo = obj.Correo;
+                    Objbd.Direccion = obj.Direccion;
+                    Objbd.Telefono = obj.Telefono;
+                    // Objbd.Genero = obj.Genero;
                     db.Entry(Objbd).State = EntityState.Modified;
                     int Resultado = db.SaveChanges();
                     if (Resultado > 0)
