@@ -152,9 +152,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(531, 12);
+            this.pictureBox1.Image = global::AmorPropio.Properties.Resources.Logop;
+            this.pictureBox1.Location = new System.Drawing.Point(677, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(414, 163);
+            this.pictureBox1.Size = new System.Drawing.Size(268, 186);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 86;
             this.pictureBox1.TabStop = false;
