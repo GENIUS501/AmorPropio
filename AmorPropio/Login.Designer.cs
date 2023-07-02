@@ -1,5 +1,5 @@
 ﻿
-namespace Lienzos
+namespace AmorPropio
 {
     partial class Login
     {
@@ -103,7 +103,7 @@ namespace Lienzos
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Logop;
+            this.pictureBox1.Image = global::AmorPropio.Properties.Resources.Logop;
             this.pictureBox1.Location = new System.Drawing.Point(64, -3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(128, 110);

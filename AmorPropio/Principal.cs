@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lienzos
+namespace AmorPropio
 {
     public partial class Principal : Form
     {

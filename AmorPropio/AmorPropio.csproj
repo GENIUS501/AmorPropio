@@ -7,8 +7,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1C2DF4CE-59E8-4171-9A32-CEB962465DE6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Lienzos</RootNamespace>
-    <AssemblyName>Lienzos</AssemblyName>
+    <RootNamespace>AmorPropio</RootNamespace>
+    <AssemblyName>AmorPropio</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

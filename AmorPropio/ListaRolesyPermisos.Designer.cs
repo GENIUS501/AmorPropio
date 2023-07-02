@@ -1,4 +1,4 @@
-﻿namespace Lienzos
+﻿namespace AmorPropio
 {
     partial class ListaRolesyPermisos
     {
@@ -177,7 +177,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Lienzos.Properties.Resources.Logop;
+            this.pictureBox1.Image = global::AmorPropio.Properties.Resources.Logop;
             this.pictureBox1.Location = new System.Drawing.Point(499, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(255, 199);

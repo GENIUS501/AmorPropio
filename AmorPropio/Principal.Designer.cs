@@ -1,4 +1,4 @@
-﻿namespace Lienzos
+﻿namespace AmorPropio
 {
     partial class Principal
     {
@@ -224,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Lienzos.Properties.Resources.LogoGrande;
+            this.BackgroundImage = global::AmorPropio.Properties.Resources.LogoGrande;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.statusStrip1);

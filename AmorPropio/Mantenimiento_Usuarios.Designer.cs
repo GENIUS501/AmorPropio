@@ -1,4 +1,4 @@
-﻿namespace Lienzos
+﻿namespace AmorPropio
 {
     partial class Mantenimiento_Usuarios
     {

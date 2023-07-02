@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lienzos
+namespace AmorPropio
 {
     public partial class Mantenimiento_Usuarios : Form
     {
@@ -159,7 +159,8 @@ namespace Lienzos
             this.txt_apellido1.Text = Obj.Primer_Apellido;
             this.txt_apellido2.Text = Obj.Segundo_Apellido;
             this.cbo_Genero.SelectedValue= Obj.Genero;
-            //this.txt_correo.Text = Obj.c;
+            this.txt_correo.Text = Obj.Correo;
+            this.txt_telefono.Text = Obj.Telefono.ToString();
             this.txt_clave.Text = "********";
             this.txt_user.Text = Obj.Nombre_Usuario;
             this.cbo_rol.SelectedValue = Obj.Id_Rol;
