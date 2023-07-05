@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantenimiento_Tipos_Producto));
             this.Grp_Categorias = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,8 +40,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Grp_Categorias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // Grp_Categorias
@@ -145,6 +148,10 @@
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Mantenimiento_Tipos_Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,9 +162,11 @@
             this.Controls.Add(this.btnAceptar);
             this.Name = "Mantenimiento_Tipos_Producto";
             this.Text = "Mantenimiento_Tipos_Producto";
+            this.Load += new System.EventHandler(this.Mantenimiento_Tipos_Producto_Load);
             this.Grp_Categorias.ResumeLayout(false);
             this.Grp_Categorias.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -173,5 +182,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
