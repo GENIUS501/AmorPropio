@@ -30,7 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantenimiento_Productos));
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.Grp_Categorias = new System.Windows.Forms.GroupBox();
+            this.Grp_Productos = new System.Windows.Forms.GroupBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.cbo_categorias = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_id = new System.Windows.Forms.Label();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
@@ -39,9 +41,7 @@
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
-            this.cbo_categorias = new System.Windows.Forms.ComboBox();
-            this.Grp_Categorias.SuspendLayout();
+            this.Grp_Productos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,23 +58,43 @@
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // Grp_Categorias
+            // Grp_Productos
             // 
-            this.Grp_Categorias.Controls.Add(this.label7);
-            this.Grp_Categorias.Controls.Add(this.cbo_categorias);
-            this.Grp_Categorias.Controls.Add(this.pictureBox1);
-            this.Grp_Categorias.Controls.Add(this.lbl_id);
-            this.Grp_Categorias.Controls.Add(this.txt_descripcion);
-            this.Grp_Categorias.Controls.Add(this.txt_id);
-            this.Grp_Categorias.Controls.Add(this.label5);
-            this.Grp_Categorias.Controls.Add(this.txt_nombre);
-            this.Grp_Categorias.Controls.Add(this.label2);
-            this.Grp_Categorias.Location = new System.Drawing.Point(12, 12);
-            this.Grp_Categorias.Name = "Grp_Categorias";
-            this.Grp_Categorias.Size = new System.Drawing.Size(323, 304);
-            this.Grp_Categorias.TabIndex = 76;
-            this.Grp_Categorias.TabStop = false;
-            this.Grp_Categorias.Text = "Datos";
+            this.Grp_Productos.Controls.Add(this.label7);
+            this.Grp_Productos.Controls.Add(this.cbo_categorias);
+            this.Grp_Productos.Controls.Add(this.pictureBox1);
+            this.Grp_Productos.Controls.Add(this.lbl_id);
+            this.Grp_Productos.Controls.Add(this.txt_descripcion);
+            this.Grp_Productos.Controls.Add(this.txt_id);
+            this.Grp_Productos.Controls.Add(this.label5);
+            this.Grp_Productos.Controls.Add(this.txt_nombre);
+            this.Grp_Productos.Controls.Add(this.label2);
+            this.Grp_Productos.Location = new System.Drawing.Point(12, 12);
+            this.Grp_Productos.Name = "Grp_Productos";
+            this.Grp_Productos.Size = new System.Drawing.Size(323, 304);
+            this.Grp_Productos.TabIndex = 76;
+            this.Grp_Productos.TabStop = false;
+            this.Grp_Productos.Text = "Datos";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 81);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(88, 13);
+            this.label7.TabIndex = 75;
+            this.label7.Text = "Tipo de producto";
+            // 
+            // cbo_categorias
+            // 
+            this.cbo_categorias.DisplayMember = "NombresCategoria";
+            this.cbo_categorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_categorias.FormattingEnabled = true;
+            this.cbo_categorias.Location = new System.Drawing.Point(9, 99);
+            this.cbo_categorias.Name = "cbo_categorias";
+            this.cbo_categorias.Size = new System.Drawing.Size(166, 21);
+            this.cbo_categorias.TabIndex = 74;
+            this.cbo_categorias.ValueMember = "ID";
             // 
             // pictureBox1
             // 
@@ -149,38 +169,19 @@
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(6, 81);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(88, 13);
-            this.label7.TabIndex = 75;
-            this.label7.Text = "Tipo de producto";
-            // 
-            // cbo_categorias
-            // 
-            this.cbo_categorias.DisplayMember = "NombresCategoria";
-            this.cbo_categorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_categorias.FormattingEnabled = true;
-            this.cbo_categorias.Location = new System.Drawing.Point(9, 99);
-            this.cbo_categorias.Name = "cbo_categorias";
-            this.cbo_categorias.Size = new System.Drawing.Size(166, 21);
-            this.cbo_categorias.TabIndex = 74;
-            this.cbo_categorias.ValueMember = "ID";
-            // 
-            // MantenimientoProductos
+            // Mantenimiento_Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(351, 356);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.Grp_Categorias);
+            this.Controls.Add(this.Grp_Productos);
             this.Controls.Add(this.btnAceptar);
-            this.Name = "MantenimientoProductos";
+            this.Name = "Mantenimiento_Productos";
             this.Text = "MantenimientoProductos";
-            this.Grp_Categorias.ResumeLayout(false);
-            this.Grp_Categorias.PerformLayout();
+            this.Load += new System.EventHandler(this.Mantenimiento_Productos_Load);
+            this.Grp_Productos.ResumeLayout(false);
+            this.Grp_Productos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -189,7 +190,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.GroupBox Grp_Categorias;
+        private System.Windows.Forms.GroupBox Grp_Productos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_id;
         private System.Windows.Forms.TextBox txt_descripcion;

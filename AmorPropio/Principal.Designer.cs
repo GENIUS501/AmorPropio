@@ -105,6 +105,7 @@
             this.Productos.Name = "Productos";
             this.Productos.Size = new System.Drawing.Size(180, 22);
             this.Productos.Text = "Productos";
+            this.Productos.Click += new System.EventHandler(this.Productos_Click);
             // 
             // Tipo_Productos
             // 
