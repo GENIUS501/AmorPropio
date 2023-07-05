@@ -267,7 +267,7 @@ namespace AmorPropio
                 errorProvider1.SetError(txt_nombre, "");
                 errorProvider1.SetError(txt_clave, "");
                 errorProvider1.SetError(txt_cclave, "");
-                //errorProvider1.SetError(txt_correo, "");
+                errorProvider1.SetError(txt_correo, "");
                 errorProvider1.SetError(txt_user, "");
                 errorProvider1.SetError(cbo_rol, "");
             }

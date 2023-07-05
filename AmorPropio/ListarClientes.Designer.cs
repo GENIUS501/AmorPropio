@@ -192,6 +192,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "ListarClientes";
             this.Text = "ListarClientes";
+            this.Load += new System.EventHandler(this.ListarClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dat_principal)).EndInit();
             this.groupBox1.ResumeLayout(false);
