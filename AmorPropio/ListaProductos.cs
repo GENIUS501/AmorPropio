@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -222,5 +223,29 @@ namespace AmorPropio
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dat_principal.Columns[e.ColumnIndex].Name == "Imagen")
+            {
+                if (e.Value != null)
+                {
+                    Image originalImage = null;
+                    byte[] imgData = (byte[])e.Value;
+                    using (MemoryStream ms = new MemoryStream(imgData, 0, imgData.Length))
+                    {
+                        ms.Write(imgData, 0, imgData.Length);
+                        originalImage = Image.FromStream(ms, true);
+                    }
+                   // Image originalImage = (Image)e.Value;
+                    int desiredWidth = 50; // Anchura deseada para la imagen
+                    int desiredHeight = 50; // Altura deseada para la imagen
+
+                    Image resizedImage = new Bitmap(originalImage, desiredWidth, desiredHeight);
+                    e.Value = resizedImage;
+                }
+            }
+        }
+
     }
 }

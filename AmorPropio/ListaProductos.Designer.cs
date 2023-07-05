@@ -145,6 +145,7 @@
             // dat_principal
             // 
             this.dat_principal.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dat_principal.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dat_principal.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dat_principal.Location = new System.Drawing.Point(12, 204);
             this.dat_principal.Name = "dat_principal";
@@ -152,6 +153,7 @@
             this.dat_principal.Size = new System.Drawing.Size(933, 185);
             this.dat_principal.TabIndex = 80;
             this.dat_principal.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_principal_CellClick);
+            this.dat_principal.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
             // btn_editar
             // 
@@ -191,6 +193,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(958, 400);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_consultar);

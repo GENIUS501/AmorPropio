@@ -27,16 +27,21 @@ namespace AmorPropio
         {
             try
             {
-                NProductos NegociosTipoProducto = new NProductos();
-                this.cbo_categorias.DisplayMember = "Text";
-                this.cbo_categorias.ValueMember = "Value";
+                NTipo_Producto NegociosTipoProducto = new NTipo_Producto();
+                this.cbo_tipo_productos.DisplayMember = "Text";
+                this.cbo_tipo_productos.ValueMember = "Value";
                 var TipoProductoDataSource = NegociosTipoProducto.Mostrar().Select(x => new
                 {
                     Text = x.Nombre,
-                    Value = x.ID_Tipo_Producto.ToString()
+                    Value = x.ID_Tipo_Producto
                 }
                 );
-                this.cbo_categorias.DataSource = TipoProductoDataSource.ToArray();
+                this.cbo_tipo_productos.DataSource = TipoProductoDataSource.ToArray();
+                if (Accion == "A")
+                {
+                    this.lbl_id.Visible = false;
+                    this.txt_id.Visible = false;
+                }
                 if (Accion == "M" || Accion == "C")
                 {
                     llenar();
@@ -59,7 +64,7 @@ namespace AmorPropio
             this.txt_id.Text = Obj.ID_Producto.ToString();
             this.txt_nombre.Text = Obj.Nombre;
             this.txt_descripcion.Text = Obj.Descripcion;
-            this.cbo_categorias.SelectedValue = Obj.ID_Tipo_Producto;
+            this.cbo_tipo_productos.SelectedValue = Obj.ID_Tipo_Producto;
             this.txtPrecio.Text = Obj.Precio.ToString();
             this.txtCantidad.Text = Obj.Cantidad.ToString();
             byte[] imgData = Obj.Imagen;
@@ -149,7 +154,7 @@ namespace AmorPropio
                         EProductos Obj = new EProductos();
                         Obj.Nombre = this.txt_nombre.Text;
                         Obj.Descripcion = this.txt_descripcion.Text;
-                        Obj.ID_Tipo_Producto = int.Parse(this.cbo_categorias.SelectedValue.ToString());
+                        Obj.ID_Tipo_Producto = int.Parse(this.cbo_tipo_productos.SelectedValue.ToString());
                         Obj.Cantidad = int.Parse(this.txtCantidad.Text);
                         Obj.Precio = int.Parse(this.txtPrecio.Text);
                         if (this.txtRutaImagen.Text != "")

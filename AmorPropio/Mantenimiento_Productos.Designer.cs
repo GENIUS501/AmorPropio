@@ -41,7 +41,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtRutaImagen = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.cbo_categorias = new System.Windows.Forms.ComboBox();
+            this.cbo_tipo_productos = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_id = new System.Windows.Forms.Label();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
@@ -63,13 +63,14 @@
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(224, 470);
+            this.btnCancelar.Location = new System.Drawing.Point(210, 470);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(83, 23);
             this.btnCancelar.TabIndex = 78;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // Grp_Productos
             // 
@@ -82,7 +83,7 @@
             this.Grp_Productos.Controls.Add(this.label1);
             this.Grp_Productos.Controls.Add(this.txtRutaImagen);
             this.Grp_Productos.Controls.Add(this.label7);
-            this.Grp_Productos.Controls.Add(this.cbo_categorias);
+            this.Grp_Productos.Controls.Add(this.cbo_tipo_productos);
             this.Grp_Productos.Controls.Add(this.pictureBox1);
             this.Grp_Productos.Controls.Add(this.lbl_id);
             this.Grp_Productos.Controls.Add(this.txt_descripcion);
@@ -176,16 +177,16 @@
             this.label7.TabIndex = 75;
             this.label7.Text = "Tipo de producto";
             // 
-            // cbo_categorias
+            // cbo_tipo_productos
             // 
-            this.cbo_categorias.DisplayMember = "NombresCategoria";
-            this.cbo_categorias.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_categorias.FormattingEnabled = true;
-            this.cbo_categorias.Location = new System.Drawing.Point(9, 99);
-            this.cbo_categorias.Name = "cbo_categorias";
-            this.cbo_categorias.Size = new System.Drawing.Size(166, 21);
-            this.cbo_categorias.TabIndex = 74;
-            this.cbo_categorias.ValueMember = "ID";
+            this.cbo_tipo_productos.DisplayMember = "NombresCategoria";
+            this.cbo_tipo_productos.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_tipo_productos.FormattingEnabled = true;
+            this.cbo_tipo_productos.Location = new System.Drawing.Point(9, 99);
+            this.cbo_tipo_productos.Name = "cbo_tipo_productos";
+            this.cbo_tipo_productos.Size = new System.Drawing.Size(166, 21);
+            this.cbo_tipo_productos.TabIndex = 74;
+            this.cbo_tipo_productos.ValueMember = "ID";
             // 
             // pictureBox1
             // 
@@ -252,13 +253,14 @@
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAceptar.Location = new System.Drawing.Point(108, 470);
+            this.btnAceptar.Location = new System.Drawing.Point(94, 470);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(79, 23);
             this.btnAceptar.TabIndex = 77;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // dlgImagen
             // 
@@ -302,7 +304,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cbo_categorias;
+        private System.Windows.Forms.ComboBox cbo_tipo_productos;
         private System.Windows.Forms.PictureBox ImgProducto;
         private System.Windows.Forms.Button btnCargarImagen;
         private System.Windows.Forms.Label label1;
