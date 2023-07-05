@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantenimiento_Tipos_Producto));
-            this.Grp_Categorias = new System.Windows.Forms.GroupBox();
+            this.Grp_Tipo_Productos = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_id = new System.Windows.Forms.Label();
             this.txt_descripcion = new System.Windows.Forms.TextBox();
@@ -41,26 +41,26 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.Grp_Categorias.SuspendLayout();
+            this.Grp_Tipo_Productos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
-            // Grp_Categorias
+            // Grp_Tipo_Productos
             // 
-            this.Grp_Categorias.Controls.Add(this.pictureBox1);
-            this.Grp_Categorias.Controls.Add(this.lbl_id);
-            this.Grp_Categorias.Controls.Add(this.txt_descripcion);
-            this.Grp_Categorias.Controls.Add(this.txt_id);
-            this.Grp_Categorias.Controls.Add(this.label5);
-            this.Grp_Categorias.Controls.Add(this.txt_nombre);
-            this.Grp_Categorias.Controls.Add(this.label2);
-            this.Grp_Categorias.Location = new System.Drawing.Point(12, 12);
-            this.Grp_Categorias.Name = "Grp_Categorias";
-            this.Grp_Categorias.Size = new System.Drawing.Size(323, 304);
-            this.Grp_Categorias.TabIndex = 29;
-            this.Grp_Categorias.TabStop = false;
-            this.Grp_Categorias.Text = "Datos";
+            this.Grp_Tipo_Productos.Controls.Add(this.pictureBox1);
+            this.Grp_Tipo_Productos.Controls.Add(this.lbl_id);
+            this.Grp_Tipo_Productos.Controls.Add(this.txt_descripcion);
+            this.Grp_Tipo_Productos.Controls.Add(this.txt_id);
+            this.Grp_Tipo_Productos.Controls.Add(this.label5);
+            this.Grp_Tipo_Productos.Controls.Add(this.txt_nombre);
+            this.Grp_Tipo_Productos.Controls.Add(this.label2);
+            this.Grp_Tipo_Productos.Location = new System.Drawing.Point(12, 12);
+            this.Grp_Tipo_Productos.Name = "Grp_Tipo_Productos";
+            this.Grp_Tipo_Productos.Size = new System.Drawing.Size(323, 304);
+            this.Grp_Tipo_Productos.TabIndex = 29;
+            this.Grp_Tipo_Productos.TabStop = false;
+            this.Grp_Tipo_Productos.Text = "Datos";
             // 
             // pictureBox1
             // 
@@ -134,6 +134,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btnAceptar
             // 
@@ -147,6 +148,7 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
             // errorProvider1
             // 
@@ -158,13 +160,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(349, 353);
             this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.Grp_Categorias);
+            this.Controls.Add(this.Grp_Tipo_Productos);
             this.Controls.Add(this.btnAceptar);
             this.Name = "Mantenimiento_Tipos_Producto";
             this.Text = "Mantenimiento_Tipos_Producto";
             this.Load += new System.EventHandler(this.Mantenimiento_Tipos_Producto_Load);
-            this.Grp_Categorias.ResumeLayout(false);
-            this.Grp_Categorias.PerformLayout();
+            this.Grp_Tipo_Productos.ResumeLayout(false);
+            this.Grp_Tipo_Productos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
@@ -172,7 +174,7 @@
         }
 
         #endregion
-        private System.Windows.Forms.GroupBox Grp_Categorias;
+        private System.Windows.Forms.GroupBox Grp_Tipo_Productos;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_id;
         private System.Windows.Forms.TextBox txt_descripcion;

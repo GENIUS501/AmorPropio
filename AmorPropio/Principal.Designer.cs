@@ -97,20 +97,21 @@
             // Clientes
             // 
             this.Clientes.Name = "Clientes";
-            this.Clientes.Size = new System.Drawing.Size(175, 22);
+            this.Clientes.Size = new System.Drawing.Size(180, 22);
             this.Clientes.Text = "Clientes";
             // 
             // Productos
             // 
             this.Productos.Name = "Productos";
-            this.Productos.Size = new System.Drawing.Size(175, 22);
+            this.Productos.Size = new System.Drawing.Size(180, 22);
             this.Productos.Text = "Productos";
             // 
             // Tipo_Productos
             // 
             this.Tipo_Productos.Name = "Tipo_Productos";
-            this.Tipo_Productos.Size = new System.Drawing.Size(175, 22);
+            this.Tipo_Productos.Size = new System.Drawing.Size(180, 22);
             this.Tipo_Productos.Text = "Tipos de Productos";
+            this.Tipo_Productos.Click += new System.EventHandler(this.Tipo_Productos_Click);
             // 
             // Procesos
             // 

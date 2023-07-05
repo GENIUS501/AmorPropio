@@ -45,7 +45,7 @@ namespace AmorPropio
                     llenar();
                     if (Accion == "C")
                     {
-                        this.Grp_Categorias.Enabled = false;
+                        this.Grp_Tipo_Productos.Enabled = false;
                     }
                 }
             }
@@ -117,19 +117,19 @@ namespace AmorPropio
 
                             if (FilasAfectadas > 0)
                             {
-                                MessageBox.Show("Categoria Agregada exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Tipo de producto Agregada exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
                             {
                                 if (FilasAfectadas == -1)
                                 {
-                                    MessageBox.Show("La categoria se ha agregado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    MessageBox.Show("La Tipo de producto se ha agregado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                     this.Close();
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Error al agregar el categoria!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("Error al agregar el Tipo de producto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
                         }
@@ -142,19 +142,19 @@ namespace AmorPropio
                             FilasAfectadas = Negocios.Modificar(Obj, Usuario);
                             if (FilasAfectadas > 0)
                             {
-                                MessageBox.Show("Categoria modificada exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Tipo de producto modificada exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 this.Close();
                             }
                             else
                             {
                                 if (FilasAfectadas == -1)
                                 {
-                                    MessageBox.Show("La categoria se ha modificado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                                    MessageBox.Show("La Tipo de producto se ha modificado exitosamente pero no se a podido registrar la transaccion!!!", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                                     this.Close();
                                 }
                                 else
                                 {
-                                    MessageBox.Show("Error al modificar la categoria!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                                    MessageBox.Show("Error al modificar la Tipo de producto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                                 }
                             }
                         }
