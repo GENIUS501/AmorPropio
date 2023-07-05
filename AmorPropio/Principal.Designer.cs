@@ -99,6 +99,7 @@
             this.Clientes.Name = "Clientes";
             this.Clientes.Size = new System.Drawing.Size(180, 22);
             this.Clientes.Text = "Clientes";
+            this.Clientes.Click += new System.EventHandler(this.Clientes_Click);
             // 
             // Productos
             // 
