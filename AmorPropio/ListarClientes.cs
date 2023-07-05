@@ -180,7 +180,7 @@ namespace AmorPropio
                     if (dr == DialogResult.Yes)
                     {
                         Int32 FilasAfectadas = 0;
-                        NTipo_Producto Negocios = new NTipo_Producto();
+                        NClientes Negocios = new NClientes();
                         FilasAfectadas = Negocios.Eliminar(valorcelda, Usuario);
                         if (FilasAfectadas > 0)
                         {

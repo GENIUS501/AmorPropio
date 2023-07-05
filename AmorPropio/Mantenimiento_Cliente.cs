@@ -187,6 +187,7 @@ namespace AmorPropio
                         #region Modificar
                         if (Accion == "M")
                         {
+                            Obj.ID_Cliente = Id;
                             FilasAfectadas = Negocios.Modificar(Obj, Usuario);
                             MessageBox.Show("Cliente modificado exitosamente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             this.Close();

@@ -94,7 +94,7 @@ namespace AccesoDatos
                 using (TransactionScope Ts = new TransactionScope(TransactionScopeAsyncFlowOption.Enabled))
                 {
                     var Objbd = db.Tab_Clientes.Where(x => x.ID_Cliente == obj.ID_Cliente).FirstOrDefault();
-                    Objbd.Identificacion = obj.Identificacion;
+                    Objbd.Identificacion = obj.Identificacion.ToString();
                     Objbd.Nombre = obj.Nombre;
                     Objbd.Primer_Apellido = obj.Primer_Apellido;
                     Objbd.Segundo_Apellido = obj.Segundo_Apellido;
