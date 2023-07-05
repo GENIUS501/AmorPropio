@@ -28,9 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Mantenimiento_Productos));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.Grp_Productos = new System.Windows.Forms.GroupBox();
+            this.txtPrecio = new System.Windows.Forms.MaskedTextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtCantidad = new System.Windows.Forms.MaskedTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.ImgProducto = new System.Windows.Forms.PictureBox();
+            this.btnCargarImagen = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtRutaImagen = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cbo_categorias = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -41,8 +50,12 @@
             this.txt_nombre = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.dlgImagen = new System.Windows.Forms.OpenFileDialog();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.Grp_Productos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -50,7 +63,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnCancelar.Image = ((System.Drawing.Image)(resources.GetObject("btnCancelar.Image")));
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnCancelar.Location = new System.Drawing.Point(190, 322);
+            this.btnCancelar.Location = new System.Drawing.Point(224, 470);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(83, 23);
             this.btnCancelar.TabIndex = 78;
@@ -60,6 +73,14 @@
             // 
             // Grp_Productos
             // 
+            this.Grp_Productos.Controls.Add(this.txtPrecio);
+            this.Grp_Productos.Controls.Add(this.label4);
+            this.Grp_Productos.Controls.Add(this.txtCantidad);
+            this.Grp_Productos.Controls.Add(this.label3);
+            this.Grp_Productos.Controls.Add(this.ImgProducto);
+            this.Grp_Productos.Controls.Add(this.btnCargarImagen);
+            this.Grp_Productos.Controls.Add(this.label1);
+            this.Grp_Productos.Controls.Add(this.txtRutaImagen);
             this.Grp_Productos.Controls.Add(this.label7);
             this.Grp_Productos.Controls.Add(this.cbo_categorias);
             this.Grp_Productos.Controls.Add(this.pictureBox1);
@@ -71,10 +92,80 @@
             this.Grp_Productos.Controls.Add(this.label2);
             this.Grp_Productos.Location = new System.Drawing.Point(12, 12);
             this.Grp_Productos.Name = "Grp_Productos";
-            this.Grp_Productos.Size = new System.Drawing.Size(323, 304);
+            this.Grp_Productos.Size = new System.Drawing.Size(361, 418);
             this.Grp_Productos.TabIndex = 76;
             this.Grp_Productos.TabStop = false;
             this.Grp_Productos.Text = "Datos";
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(9, 146);
+            this.txtPrecio.Mask = "00000000";
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(164, 20);
+            this.txtPrecio.TabIndex = 84;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(6, 130);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(37, 13);
+            this.label4.TabIndex = 83;
+            this.label4.Text = "Precio";
+            // 
+            // txtCantidad
+            // 
+            this.txtCantidad.Location = new System.Drawing.Point(191, 146);
+            this.txtCantidad.Mask = "00000000";
+            this.txtCantidad.Name = "txtCantidad";
+            this.txtCantidad.Size = new System.Drawing.Size(164, 20);
+            this.txtCantidad.TabIndex = 82;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(188, 130);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(49, 13);
+            this.label3.TabIndex = 81;
+            this.label3.Text = "Cantidad";
+            // 
+            // ImgProducto
+            // 
+            this.ImgProducto.Location = new System.Drawing.Point(9, 215);
+            this.ImgProducto.Name = "ImgProducto";
+            this.ImgProducto.Size = new System.Drawing.Size(119, 79);
+            this.ImgProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ImgProducto.TabIndex = 79;
+            this.ImgProducto.TabStop = false;
+            // 
+            // btnCargarImagen
+            // 
+            this.btnCargarImagen.Location = new System.Drawing.Point(181, 189);
+            this.btnCargarImagen.Name = "btnCargarImagen";
+            this.btnCargarImagen.Size = new System.Drawing.Size(28, 21);
+            this.btnCargarImagen.TabIndex = 78;
+            this.btnCargarImagen.Text = "...";
+            this.btnCargarImagen.UseVisualStyleBackColor = true;
+            this.btnCargarImagen.Click += new System.EventHandler(this.btnCargarImagen_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 173);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(155, 13);
+            this.label1.TabIndex = 77;
+            this.label1.Text = "Ruta de la imagen del producto";
+            // 
+            // txtRutaImagen
+            // 
+            this.txtRutaImagen.Enabled = false;
+            this.txtRutaImagen.Location = new System.Drawing.Point(9, 189);
+            this.txtRutaImagen.Name = "txtRutaImagen";
+            this.txtRutaImagen.Size = new System.Drawing.Size(166, 20);
+            this.txtRutaImagen.TabIndex = 76;
             // 
             // label7
             // 
@@ -99,9 +190,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::AmorPropio.Properties.Resources.Logop;
-            this.pictureBox1.Location = new System.Drawing.Point(195, 9);
+            this.pictureBox1.Location = new System.Drawing.Point(226, 10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(128, 110);
+            this.pictureBox1.Size = new System.Drawing.Size(135, 110);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 73;
             this.pictureBox1.TabStop = false;
@@ -117,7 +208,7 @@
             // 
             // txt_descripcion
             // 
-            this.txt_descripcion.Location = new System.Drawing.Point(9, 194);
+            this.txt_descripcion.Location = new System.Drawing.Point(9, 313);
             this.txt_descripcion.Multiline = true;
             this.txt_descripcion.Name = "txt_descripcion";
             this.txt_descripcion.Size = new System.Drawing.Size(291, 92);
@@ -134,7 +225,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 178);
+            this.label5.Location = new System.Drawing.Point(6, 297);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 13);
             this.label5.TabIndex = 21;
@@ -142,15 +233,15 @@
             // 
             // txt_nombre
             // 
-            this.txt_nombre.Location = new System.Drawing.Point(9, 146);
+            this.txt_nombre.Location = new System.Drawing.Point(109, 44);
             this.txt_nombre.Name = "txt_nombre";
-            this.txt_nombre.Size = new System.Drawing.Size(166, 20);
+            this.txt_nombre.Size = new System.Drawing.Size(104, 20);
             this.txt_nombre.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 130);
+            this.label2.Location = new System.Drawing.Point(106, 28);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 13);
             this.label2.TabIndex = 19;
@@ -161,7 +252,7 @@
             this.btnAceptar.Font = new System.Drawing.Font("Arial", 9.75F);
             this.btnAceptar.Image = ((System.Drawing.Image)(resources.GetObject("btnAceptar.Image")));
             this.btnAceptar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAceptar.Location = new System.Drawing.Point(74, 322);
+            this.btnAceptar.Location = new System.Drawing.Point(108, 470);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(79, 23);
             this.btnAceptar.TabIndex = 77;
@@ -169,11 +260,20 @@
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = true;
             // 
+            // dlgImagen
+            // 
+            this.dlgImagen.FileName = "Imagen";
+            this.dlgImagen.Filter = "Archivos de imágenes |*.jpg;*.jpeg;*.bmp";
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Mantenimiento_Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(351, 356);
+            this.ClientSize = new System.Drawing.Size(385, 505);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.Grp_Productos);
             this.Controls.Add(this.btnAceptar);
@@ -182,7 +282,9 @@
             this.Load += new System.EventHandler(this.Mantenimiento_Productos_Load);
             this.Grp_Productos.ResumeLayout(false);
             this.Grp_Productos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ImgProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -201,5 +303,15 @@
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbo_categorias;
+        private System.Windows.Forms.PictureBox ImgProducto;
+        private System.Windows.Forms.Button btnCargarImagen;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtRutaImagen;
+        private System.Windows.Forms.OpenFileDialog dlgImagen;
+        private System.Windows.Forms.MaskedTextBox txtPrecio;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.MaskedTextBox txtCantidad;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

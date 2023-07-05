@@ -13,6 +13,7 @@ namespace Entidades
         public string Descripcion { get; set; }
         public int ID_Tipo_Producto { get; set; }
         public decimal Precio { get; set; }
-        public int Catidad { get; set; }
+        public int Cantidad { get; set; }
+        public byte[] Imagen { get; set; }
     }
 }
