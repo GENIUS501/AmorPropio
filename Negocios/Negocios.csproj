@@ -44,6 +44,7 @@
     <Compile Include="NBitacora_Movimientos.cs" />
     <Compile Include="NBitacora_Sesiones.cs" />
     <Compile Include="NClientes.cs" />
+    <Compile Include="NDevoluciones.cs" />
     <Compile Include="NProductos.cs" />
     <Compile Include="NRoles.cs" />
     <Compile Include="NTipo_Producto.cs" />

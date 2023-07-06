@@ -12,6 +12,7 @@ namespace Entidades
         public int ID_Cliente { get; set; }
         public string Tipo_pago { get; set; }
         public int Numero_factura { get; set; }
+        public double CantidadProducto { get; set; }
         public System.DateTime Fecha_venta { get; set; }
         public double Total { get; set; }
     }

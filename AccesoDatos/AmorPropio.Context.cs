@@ -28,6 +28,7 @@ namespace AccesoDatos
         public virtual DbSet<Tab_Bitacora_Movimientos> Tab_Bitacora_Movimientos { get; set; }
         public virtual DbSet<Tab_Bitacora_Sesiones> Tab_Bitacora_Sesiones { get; set; }
         public virtual DbSet<Tab_Clientes> Tab_Clientes { get; set; }
+        public virtual DbSet<Tab_Devoluciones> Tab_Devoluciones { get; set; }
         public virtual DbSet<Tab_Permisos> Tab_Permisos { get; set; }
         public virtual DbSet<Tab_Productos> Tab_Productos { get; set; }
         public virtual DbSet<Tab_Roles> Tab_Roles { get; set; }

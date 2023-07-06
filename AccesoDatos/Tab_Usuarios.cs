@@ -19,6 +19,7 @@ namespace AccesoDatos
         {
             this.Tab_Bitacora_Movimientos = new HashSet<Tab_Bitacora_Movimientos>();
             this.Tab_Bitacora_Sesiones = new HashSet<Tab_Bitacora_Sesiones>();
+            this.Tab_Devoluciones = new HashSet<Tab_Devoluciones>();
             this.Tab_Venta = new HashSet<Tab_Venta>();
         }
     
@@ -39,6 +40,8 @@ namespace AccesoDatos
         public virtual ICollection<Tab_Bitacora_Movimientos> Tab_Bitacora_Movimientos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tab_Bitacora_Sesiones> Tab_Bitacora_Sesiones { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tab_Devoluciones> Tab_Devoluciones { get; set; }
         public virtual Tab_Roles Tab_Roles { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tab_Venta> Tab_Venta { get; set; }

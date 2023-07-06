@@ -17,6 +17,7 @@ namespace AccesoDatos
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Tab_Clientes()
         {
+            this.Tab_Devoluciones = new HashSet<Tab_Devoluciones>();
             this.Tab_Venta = new HashSet<Tab_Venta>();
         }
     
@@ -29,6 +30,8 @@ namespace AccesoDatos
         public Nullable<int> Telefono { get; set; }
         public string Correo { get; set; }
     
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Tab_Devoluciones> Tab_Devoluciones { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Tab_Venta> Tab_Venta { get; set; }
     }

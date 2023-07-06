@@ -4,20 +4,24 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0ed08067584a4bc5a38c0dd34dbb64b2" Name="Diagram1">
-        <EntityTypeShape EntityType="AmorPropioModel.Tab_Bitacora_Movimientos" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="AmorPropioModel.Tab_Bitacora_Sesiones" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="AmorPropioModel.Tab_Clientes" Width="1.5" PointX="6" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="AmorPropioModel.Tab_Permisos" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="AmorPropioModel.Tab_Productos" Width="1.5" PointX="8.25" PointY="12" IsExpanded="true" />
-        <EntityTypeShape EntityType="AmorPropioModel.Tab_Roles" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
-        <EntityTypeShape EntityType="AmorPropioModel.Tab_Tipo_Productos" Width="1.5" PointX="6" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="AmorPropioModel.Tab_Usuarios" Width="1.5" PointX="3" PointY="6.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="AmorPropioModel.Tab_Venta" Width="1.5" PointX="8.25" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="AmorPropioModel.Tab_Venta_detallada" Width="1.5" PointX="10.5" PointY="7.375" IsExpanded="true" />
+      <Diagram DiagramId="28da044e6e404a889b07673644778a93" Name="Diagram1">
+        <EntityTypeShape EntityType="AmorPropioModel.Tab_Bitacora_Movimientos" Width="1.5" PointX="5.25" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AmorPropioModel.Tab_Bitacora_Sesiones" Width="1.5" PointX="5.25" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AmorPropioModel.Tab_Clientes" Width="1.5" PointX="6" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AmorPropioModel.Tab_Devoluciones" Width="1.5" PointX="8.25" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AmorPropioModel.Tab_Permisos" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="AmorPropioModel.Tab_Productos" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AmorPropioModel.Tab_Roles" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="AmorPropioModel.Tab_Tipo_Productos" Width="1.5" PointX="6" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="AmorPropioModel.Tab_Usuarios" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="AmorPropioModel.Tab_Venta" Width="1.5" PointX="8.25" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="AmorPropioModel.Tab_Venta_detallada" Width="1.5" PointX="10.5" PointY="6.125" IsExpanded="true" />
         <AssociationConnector Association="AmorPropioModel.Fk_MOVIMIENTOS_USUARIOS" ManuallyRouted="false" />
         <AssociationConnector Association="AmorPropioModel.Fk_SESIONES_USUARIOS" ManuallyRouted="false" />
+        <AssociationConnector Association="AmorPropioModel.Fk_Devoluciones_Cliente" ManuallyRouted="false" />
         <AssociationConnector Association="AmorPropioModel.Fk_VENTAS_CLIENTES" ManuallyRouted="false" />
+        <AssociationConnector Association="AmorPropioModel.Fk_Devoluciones_Usuario" ManuallyRouted="false" />
+        <AssociationConnector Association="AmorPropioModel.Fk_Devoluciones_Venta" ManuallyRouted="false" />
         <AssociationConnector Association="AmorPropioModel.Fk_PERMISOS_ROLES" ManuallyRouted="false" />
         <AssociationConnector Association="AmorPropioModel.Fk_DETALLE_PRODUCTOS" ManuallyRouted="false" />
         <AssociationConnector Association="AmorPropioModel.Fk_PRODUCTOS_TIPO" ManuallyRouted="false" />

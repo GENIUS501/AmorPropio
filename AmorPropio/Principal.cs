@@ -270,5 +270,37 @@ namespace AmorPropio
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Venta_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ProcesoVentas frm = new ProcesoVentas();
+                frm.Usuario = UsuarioLogueado.ID_Usuario;
+               // frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void Devolucion_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ProcesoDevolucion frm = new ProcesoDevolucion();
+                frm.Usuario = UsuarioLogueado.ID_Usuario;
+                // frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
