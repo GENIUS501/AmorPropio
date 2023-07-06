@@ -277,7 +277,7 @@ namespace AmorPropio
             {
                 ProcesoVentas frm = new ProcesoVentas();
                 frm.Usuario = UsuarioLogueado.ID_Usuario;
-               // frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.Nombre_Usuario = UsuarioLogueado.Nombre_Usuario;
                 frm.MdiParent = this;
                 frm.Show();
             }

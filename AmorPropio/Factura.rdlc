@@ -127,7 +127,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Today()</Value>
+                    <Value>=Parameters!FechaVenta.Value</Value>
                     <Style />
                   </TextRun>
                 </TextRuns>
@@ -869,6 +869,12 @@
       <AllowBlank>true</AllowBlank>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
+    <ReportParameter Name="FechaVenta">
+      <DataType>String</DataType>
+      <Nullable>true</Nullable>
+      <AllowBlank>true</AllowBlank>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
   </ReportParameters>
   <ReportParametersLayout>
     <GridLayoutDefinition>
@@ -894,6 +900,11 @@
           <ColumnIndex>3</ColumnIndex>
           <RowIndex>0</RowIndex>
           <ParameterName>Cantidad_Lineas</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>FechaVenta</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>

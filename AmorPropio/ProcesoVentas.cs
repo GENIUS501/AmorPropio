@@ -30,8 +30,7 @@ namespace AmorPropio
         {
             try
             {
-                // TODO: esta línea de código carga datos en la tabla 'cOINDataSet1.Tab_Clientes' Puede moverla o quitarla según sea necesario.
-               // this.tab_ClientesTableAdapter.Fill(this.cOINDataSet1.Tab_Clientes);
+                lst_productos.Items.Clear();
             }
             catch (Exception ex)
             {
@@ -46,7 +45,7 @@ namespace AmorPropio
                 {
                     NProductos Negocios = new NProductos();
                     var Codigo = int.Parse(this.txt_codigo.Text);
-                    this.dat_resultado.DataSource = Negocios.Mostrar().Where(x=>x.ID_Producto==Codigo).ToList();
+                    this.dat_resultado.DataSource = Negocios.Mostrar().Where(x => x.ID_Producto == Codigo).ToList();
                 }
             }
             catch (Exception ex)
@@ -78,11 +77,12 @@ namespace AmorPropio
                 if (this.txt_cedula.Text != null)
                 {
                     NClientes Negocios = new NClientes();
-                    var Cliente = Negocios.Mostrar().Where(x=>x.Identificacion== this.txt_cedula.Text).FirstOrDefault();
+                    var Cliente = Negocios.Mostrar().Where(x => x.Identificacion == this.txt_cedula.Text).FirstOrDefault();
                     if (Cliente.Nombre != "")
                     {
                         IDCliente = Cliente.ID_Cliente;
                         this.lbl_cliente.Text = "Nombre del cliente: " + Cliente.Nombre + " " + Cliente.Primer_Apellido + " " + Cliente.Segundo_Apellido;
+                        this.lbl_cliente.Refresh();
                     }
                 }
             }
@@ -106,28 +106,20 @@ namespace AmorPropio
                 else
                 {
                     ListViewItem lista = new ListViewItem("");
+                    lista.SubItems.Add(this.dat_resultado.Rows[e.RowIndex].Cells[0].Value.ToString());
                     lista.SubItems.Add(this.dat_resultado.Rows[e.RowIndex].Cells[1].Value.ToString());
-                    lista.SubItems.Add(this.dat_resultado.Rows[e.RowIndex].Cells[2].Value.ToString());
                     lista.SubItems.Add(this.dat_resultado.Rows[e.RowIndex].Cells[4].Value.ToString());
-                    if (bool.Parse(this.dat_resultado.Rows[e.RowIndex].Cells[11].Value.ToString()))
-                    {
-                        Total += Convert.ToDouble(this.dat_resultado.Rows[e.RowIndex].Cells[4].Value.ToString());
-                        this.txt_total.Text = Total.ToString();
-                        lista.SubItems.Add(this.dat_resultado.Rows[e.RowIndex].Cells[4].Value.ToString());
-                    }
-                    else
-                    {
-                        double Impuesto = double.Parse(this.txt_impuesto.Text) / 100;
-                        double Impuestodeltotal = Convert.ToDouble(this.dat_resultado.Rows[e.RowIndex].Cells[4].Value.ToString()) * Impuesto;
-                        double ProductoconImpuesto = Convert.ToDouble(this.dat_resultado.Rows[e.RowIndex].Cells[4].Value.ToString()) + Impuestodeltotal;
-                        this.txt_total.Text = Convert.ToString(Total + ProductoconImpuesto);
-                        Total += ProductoconImpuesto;
-                        lista.SubItems.Add(ProductoconImpuesto.ToString());
-                    }
+
+                    double Impuesto = double.Parse(this.txt_impuesto.Text) / 100;
+                    double Impuestodeltotal = Convert.ToDouble(this.dat_resultado.Rows[e.RowIndex].Cells[4].Value.ToString()) * Impuesto;
+                    double ProductoconImpuesto = Convert.ToDouble(this.dat_resultado.Rows[e.RowIndex].Cells[4].Value.ToString()) + Impuestodeltotal;
+                    this.txt_total.Text = Convert.ToString(Total + ProductoconImpuesto);
+                    Total += ProductoconImpuesto;
+                    lista.SubItems.Add(ProductoconImpuesto.ToString());
                     Productos.Add(new EVentas_Detalles
                     {
                         ID_Producto = int.Parse(this.dat_resultado.Rows[e.RowIndex].Cells[0].Value.ToString()),
-                       // Codigo = this.dat_resultado.Rows[e.RowIndex].Cells[1].Value.ToString()
+                        // Codigo = this.dat_resultado.Rows[e.RowIndex].Cells[1].Value.ToString()
                     });
                     lst_productos.Items.Add(lista);
                 }
@@ -206,7 +198,15 @@ namespace AmorPropio
                     Entidad_Ventas.ID_Cliente = IDCliente;
                     Entidad_Ventas.ID_Usuario = Usuario;
                     Entidad_Ventas.CantidadProducto = lst_productos.Items.Count;
-                  //  Entidad_Ventas.Impuesto = double.Parse(this.txt_impuesto.Text);
+                    if (this.cbo_tipo_pago.Text == "")
+                    {
+                        Entidad_Ventas.Tipo_pago = "Efectivo";
+                    }
+                    else
+                    {
+                        Entidad_Ventas.Tipo_pago = this.cbo_tipo_pago.Text;
+                    }
+                    //  Entidad_Ventas.Impuesto = double.Parse(this.txt_impuesto.Text);
                     Entidad_Ventas.Total = Total;
                     foreach (var Item in Productos)
                     {
@@ -235,7 +235,7 @@ namespace AmorPropio
                                 Costo = double.Parse(NegProductos.Mostrar().Where(x => x.ID_Producto == Item.ID_Producto).FirstOrDefault().Precio.ToString()),
                                 ID = Item.ID_Producto,
                                 IdVenta = FilasAfectadas,
-                               // ProductoExento = NegProductos.Mostrar().Where(x => x.ID_Producto == Item.ID_Producto).FirstOrDefault().ProductoExento,
+                                // ProductoExento = NegProductos.Mostrar().Where(x => x.ID_Producto == Item.ID_Producto).FirstOrDefault().ProductoExento,
                             });
                         }
                         frm.Num_Fact = FilasAfectadas.ToString();

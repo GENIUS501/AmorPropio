@@ -25,9 +25,10 @@ namespace AccesoDatos
                     Tab_Venta Objbd = new Tab_Venta();
                     Objbd.ID_Cliente = obj.ID_Cliente;
                     Objbd.Total = obj.Total;
-                    Objbd.Fecha_venta = obj.Fecha_venta;
+                    Objbd.Fecha_venta = DateTime.Now;
                     Objbd.ID_Usuario = obj.ID_Usuario;
                     Objbd.Tipo_pago = obj.Tipo_pago;
+                    Objbd.CantidadProducto= obj.CantidadProducto;
                     db.Entry(Objbd).State = EntityState.Added;
                     //db.Tab_Devoluciones.Add(Objbd);
 
@@ -42,17 +43,13 @@ namespace AccesoDatos
                     }
                     if (objlista.Count > 0)
                     {
-                        foreach (var Item in objlista)
+                        var ObjGuardar = objlista.Select(x => new Tab_Venta_detallada
                         {
-                            Tab_Venta_detallada Objbddetalle = new Tab_Venta_detallada();
-                            Objbddetalle.ID_Producto = Item.ID_Producto;
-                            Objbddetalle.Numero_factura = IdVenta;
-                            Objbddetalle.Linea = Item.Linea;
-                            db.Entry(Objbddetalle).State = EntityState.Added;
-                        }
-                        //string Objason = JsonConvert.SerializeObject(obj);
-                        //List<Tab_Ventas_Detalles> Objguardar = JsonConvert.DeserializeObject<List<Tab_Ventas_Detalles>>(Objason);
-                        //db.Tab_Ventas_Detalles.AddRange(Objguardar);
+                            ID_Producto=x.ID_Producto,
+                            Numero_factura=IdVenta,
+                            Linea=x.Linea
+                        }).ToList();
+                        db.Tab_Venta_detallada.AddRange(ObjGuardar);
                     }
                     int ResultaDetalle = db.SaveChanges();
                     if (Resultado > 0 && ResultaDetalle > 0)

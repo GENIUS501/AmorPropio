@@ -18,6 +18,8 @@ namespace AmorPropio
         public int Usuario { get; set; }
         public string Nombre_Usuario { get; set; }
         int valorcelda { get; set; }
+        int ID_Cliente { get; set; }
+        int Cantidad_Producto { get; set; }
         public ProcesoDevolucion()
         {
             InitializeComponent();
@@ -29,6 +31,9 @@ namespace AmorPropio
             {
                 NDevoluciones Negocios = new NDevoluciones();
                 this.dat_principal.DataSource = Negocios.Mostrar();
+                valorcelda = -1;
+                ID_Cliente = -1;
+                Cantidad_Producto = -1;
             }
             catch (Exception ex)
             {
@@ -45,7 +50,9 @@ namespace AmorPropio
                 }
                 else
                 {
-                    valorcelda = int.Parse(this.dat_principal.Rows[e.RowIndex].Cells[0].Value.ToString());
+                    valorcelda = int.Parse(this.dat_principal.Rows[e.RowIndex].Cells[3].Value.ToString());
+                    ID_Cliente = int.Parse(this.dat_principal.Rows[e.RowIndex].Cells[1].Value.ToString());
+                    Cantidad_Producto = int.Parse(this.dat_principal.Rows[e.RowIndex].Cells[4].Value.ToString());
                 }
             }
             catch (Exception ex)
@@ -67,6 +74,8 @@ namespace AmorPropio
                         EDevoluciones Entidad = new EDevoluciones();
                         Entidad.IdVenta = valorcelda;
                         Entidad.IdUsuario = Usuario;
+                        Entidad.IDCliente = ID_Cliente;
+                        Entidad.CantidadProducto = Cantidad_Producto;
                         int FilasAfectadas = 0;
                         FilasAfectadas = Negocios.Agregar(Entidad, Usuario);
                         if (FilasAfectadas > 0)

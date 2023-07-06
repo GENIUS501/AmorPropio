@@ -59,6 +59,7 @@ CREATE TABLE Tab_Venta(
 	ID_Cliente INT NOT NULL,
 	Tipo_pago VARCHAR(25) NOT NULL,
 	Numero_factura INT IDENTITY (1,1) PRIMARY KEY NOT NULL,
+	CantidadProducto FLOAT NOT NULL,
 	Fecha_venta DATETIME NOT NULL,
 	Total FLOAT NOT NULL,
 	CONSTRAINT Fk_VENTAS_USUARIOS FOREIGN KEY(Id_Usuario) REFERENCES Tab_Usuarios(Id_Usuario),
@@ -69,7 +70,7 @@ CREATE TABLE Tab_Venta_detallada(
 	Numero_factura INT NOT NULL,
 	ID_Producto INT NOT NULL,
 	Linea INT NOT NULL,
-	PRIMARY KEY(ID_Producto,Linea),
+	PRIMARY KEY(Numero_factura,ID_Producto,Linea),
 	CONSTRAINT Fk_DETALLE_VENTAS FOREIGN KEY(Numero_factura) REFERENCES Tab_Venta(Numero_factura),
 	CONSTRAINT Fk_DETALLE_PRODUCTOS FOREIGN KEY(ID_Producto) REFERENCES Tab_Productos(ID_Producto),
 );
@@ -89,6 +90,18 @@ CREATE TABLE Tab_Bitacora_Movimientos(
    modulo VARCHAR(20),
    Id_Usuario INT,
    CONSTRAINT Fk_MOVIMIENTOS_USUARIOS FOREIGN KEY(Id_Usuario) REFERENCES Tab_Usuarios(Id_Usuario)
+);
+
+CREATE TABLE Tab_Devoluciones(
+	IdDevolucion	INT PRIMARY KEY IDENTITY(1,1)NOT NULL,
+	IdVenta	INT NOT NULL,
+	IDCliente	INT NOT NULL,
+	FechaDevolucion	DATETIME NOT NULL,
+	CantidadProducto	FLOAT NOT NULL,
+	IdUsuario	INT NOT NULL,
+	CONSTRAINT Fk_Devoluciones_Venta FOREIGN KEY(IdVenta) REFERENCES Tab_Venta(Numero_Factura),
+	CONSTRAINT Fk_Devoluciones_Cliente FOREIGN KEY(IdCliente) REFERENCES Tab_Clientes(ID_Cliente),
+	CONSTRAINT Fk_Devoluciones_Usuario FOREIGN KEY(IdUsuario) REFERENCES Tab_Usuarios(ID_Usuario)
 );
 
 INSERT INTO Tab_Roles(Nombre_Rol,Descripcion)VALUES('Administrador','Administrador')

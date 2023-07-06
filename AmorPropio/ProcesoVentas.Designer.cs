@@ -28,14 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcesoVentas));
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
             this.grp_venta = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
             this.btn_add_cliente = new System.Windows.Forms.Button();
             this.lbl_cliente = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_buscar_nombre = new System.Windows.Forms.Button();
+            this.btn_buscar_codigo = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lst_productos = new System.Windows.Forms.ListView();
@@ -47,21 +49,24 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txt_nombre_producto = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txt_codigo = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_total = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_impuesto = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.btn_buscar_nombre = new System.Windows.Forms.Button();
-            this.btn_buscar_codigo = new System.Windows.Forms.Button();
+            this.txt_codigo = new System.Windows.Forms.MaskedTextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.cbo_tipo_pago = new System.Windows.Forms.ComboBox();
             this.grp_venta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dat_resultado)).BeginInit();
             this.SuspendLayout();
             // 
             // grp_venta
             // 
+            this.grp_venta.Controls.Add(this.cbo_tipo_pago);
+            this.grp_venta.Controls.Add(this.label9);
+            this.grp_venta.Controls.Add(this.txt_codigo);
             this.grp_venta.Controls.Add(this.label8);
             this.grp_venta.Controls.Add(this.txt_cedula);
             this.grp_venta.Controls.Add(this.btn_add_cliente);
@@ -76,7 +81,6 @@
             this.grp_venta.Controls.Add(this.label6);
             this.grp_venta.Controls.Add(this.txt_nombre_producto);
             this.grp_venta.Controls.Add(this.label7);
-            this.grp_venta.Controls.Add(this.txt_codigo);
             this.grp_venta.Controls.Add(this.label4);
             this.grp_venta.Controls.Add(this.txt_total);
             this.grp_venta.Controls.Add(this.label3);
@@ -113,6 +117,7 @@
             this.btn_add_cliente.Size = new System.Drawing.Size(28, 21);
             this.btn_add_cliente.TabIndex = 6;
             this.btn_add_cliente.UseVisualStyleBackColor = true;
+            this.btn_add_cliente.Click += new System.EventHandler(this.btn_add_cliente_Click);
             // 
             // lbl_cliente
             // 
@@ -130,6 +135,28 @@
             this.label2.Size = new System.Drawing.Size(91, 13);
             this.label2.TabIndex = 57;
             this.label2.Text = "Cedula del cliente";
+            // 
+            // btn_buscar_nombre
+            // 
+            this.btn_buscar_nombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_nombre.BackgroundImage")));
+            this.btn_buscar_nombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_nombre.Location = new System.Drawing.Point(309, 32);
+            this.btn_buscar_nombre.Name = "btn_buscar_nombre";
+            this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
+            this.btn_buscar_nombre.TabIndex = 4;
+            this.btn_buscar_nombre.UseVisualStyleBackColor = true;
+            this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
+            // 
+            // btn_buscar_codigo
+            // 
+            this.btn_buscar_codigo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_codigo.BackgroundImage")));
+            this.btn_buscar_codigo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_codigo.Location = new System.Drawing.Point(136, 31);
+            this.btn_buscar_codigo.Name = "btn_buscar_codigo";
+            this.btn_buscar_codigo.Size = new System.Drawing.Size(25, 20);
+            this.btn_buscar_codigo.TabIndex = 2;
+            this.btn_buscar_codigo.UseVisualStyleBackColor = true;
+            this.btn_buscar_codigo.Click += new System.EventHandler(this.btn_buscar_codigo_Click);
             // 
             // label5
             // 
@@ -160,15 +187,17 @@
             this.lst_productos.FullRowSelect = true;
             this.lst_productos.GridLines = true;
             this.lst_productos.HideSelection = false;
-            listViewItem1.StateImageIndex = 0;
+            listViewItem2.StateImageIndex = 0;
             this.lst_productos.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem2});
             this.lst_productos.Location = new System.Drawing.Point(6, 221);
             this.lst_productos.Name = "lst_productos";
             this.lst_productos.Size = new System.Drawing.Size(547, 136);
             this.lst_productos.TabIndex = 49;
             this.lst_productos.UseCompatibleStateImageBehavior = false;
             this.lst_productos.View = System.Windows.Forms.View.Details;
+            this.lst_productos.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.lst_productos_ItemCheck);
+            this.lst_productos.ItemChecked += new System.Windows.Forms.ItemCheckedEventHandler(this.lst_productos_ItemChecked);
             // 
             // columnHeader9
             // 
@@ -178,7 +207,7 @@
             // columnHeader1
             // 
             this.columnHeader1.DisplayIndex = 0;
-            this.columnHeader1.Text = "Codigo";
+            this.columnHeader1.Text = "Id del producto";
             this.columnHeader1.Width = 76;
             // 
             // columnHeader6
@@ -200,6 +229,7 @@
             this.dat_resultado.Name = "dat_resultado";
             this.dat_resultado.Size = new System.Drawing.Size(546, 103);
             this.dat_resultado.TabIndex = 48;
+            this.dat_resultado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_resultado_CellClick);
             // 
             // label6
             // 
@@ -222,16 +252,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(6, 16);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(102, 13);
+            this.label7.Size = new System.Drawing.Size(80, 13);
             this.label7.TabIndex = 50;
-            this.label7.Text = "Codigo del producto";
-            // 
-            // txt_codigo
-            // 
-            this.txt_codigo.Location = new System.Drawing.Point(6, 32);
-            this.txt_codigo.Name = "txt_codigo";
-            this.txt_codigo.Size = new System.Drawing.Size(124, 20);
-            this.txt_codigo.TabIndex = 1;
+            this.label7.Text = "ID del producto";
             // 
             // label4
             // 
@@ -265,6 +288,7 @@
             this.txt_impuesto.Name = "txt_impuesto";
             this.txt_impuesto.Size = new System.Drawing.Size(47, 20);
             this.txt_impuesto.TabIndex = 0;
+            this.txt_impuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_impuesto_KeyPress);
             // 
             // btnCancelar
             // 
@@ -278,6 +302,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btn_cancelar_Click);
             // 
             // btnAceptar
             // 
@@ -291,26 +316,37 @@
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = true;
+            this.btnAceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
-            // btn_buscar_nombre
+            // txt_codigo
             // 
-            this.btn_buscar_nombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_nombre.BackgroundImage")));
-            this.btn_buscar_nombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_nombre.Location = new System.Drawing.Point(309, 32);
-            this.btn_buscar_nombre.Name = "btn_buscar_nombre";
-            this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar_nombre.TabIndex = 4;
-            this.btn_buscar_nombre.UseVisualStyleBackColor = true;
+            this.txt_codigo.Location = new System.Drawing.Point(9, 31);
+            this.txt_codigo.Mask = "000000000";
+            this.txt_codigo.Name = "txt_codigo";
+            this.txt_codigo.Size = new System.Drawing.Size(124, 20);
+            this.txt_codigo.TabIndex = 63;
             // 
-            // btn_buscar_codigo
+            // label9
             // 
-            this.btn_buscar_codigo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_codigo.BackgroundImage")));
-            this.btn_buscar_codigo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_codigo.Location = new System.Drawing.Point(136, 31);
-            this.btn_buscar_codigo.Name = "btn_buscar_codigo";
-            this.btn_buscar_codigo.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar_codigo.TabIndex = 2;
-            this.btn_buscar_codigo.UseVisualStyleBackColor = true;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(98, 360);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 13);
+            this.label9.TabIndex = 64;
+            this.label9.Text = "Tipo de pago";
+            // 
+            // cbo_tipo_pago
+            // 
+            this.cbo_tipo_pago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_tipo_pago.FormattingEnabled = true;
+            this.cbo_tipo_pago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Tarjeta",
+            "Sinpe"});
+            this.cbo_tipo_pago.Location = new System.Drawing.Point(101, 375);
+            this.cbo_tipo_pago.Name = "cbo_tipo_pago";
+            this.cbo_tipo_pago.Size = new System.Drawing.Size(121, 21);
+            this.cbo_tipo_pago.TabIndex = 65;
             // 
             // ProcesoVentas
             // 
@@ -322,6 +358,7 @@
             this.Controls.Add(this.grp_venta);
             this.Name = "ProcesoVentas";
             this.Text = "ProcesoVentas";
+            this.Load += new System.EventHandler(this.ProcesoVentas_Load);
             this.grp_venta.ResumeLayout(false);
             this.grp_venta.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dat_resultado)).EndInit();
@@ -350,12 +387,14 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txt_nombre_producto;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt_codigo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_total;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_impuesto;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAceptar;
+        private System.Windows.Forms.MaskedTextBox txt_codigo;
+        private System.Windows.Forms.ComboBox cbo_tipo_pago;
+        private System.Windows.Forms.Label label9;
     }
 }
