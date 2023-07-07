@@ -203,6 +203,7 @@
             this.Bitacora_Movimientos.Name = "Bitacora_Movimientos";
             this.Bitacora_Movimientos.Size = new System.Drawing.Size(227, 22);
             this.Bitacora_Movimientos.Text = "Bitacora de movimientos";
+            this.Bitacora_Movimientos.Click += new System.EventHandler(this.Bitacora_Movimientos_Click);
             // 
             // Salir
             // 

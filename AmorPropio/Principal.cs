@@ -305,6 +305,11 @@ namespace AmorPropio
 
         private void Bitacora_Ingresos_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void Bitacora_Movimientos_Click(object sender, EventArgs e)
+        {
             try
             {
                 BitacoraMovimientos frm = new BitacoraMovimientos();
