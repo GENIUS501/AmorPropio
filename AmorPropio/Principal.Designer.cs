@@ -160,12 +160,14 @@
             this.Reporte_Cliente.Name = "Reporte_Cliente";
             this.Reporte_Cliente.Size = new System.Drawing.Size(188, 22);
             this.Reporte_Cliente.Text = "Reporte de clientes";
+            this.Reporte_Cliente.Click += new System.EventHandler(this.Reporte_Cliente_Click);
             // 
             // Reporte_Producto
             // 
             this.Reporte_Producto.Name = "Reporte_Producto";
             this.Reporte_Producto.Size = new System.Drawing.Size(188, 22);
             this.Reporte_Producto.Text = "Reporte de productos";
+            this.Reporte_Producto.Click += new System.EventHandler(this.Reporte_Producto_Click);
             // 
             // Seguridad
             // 
