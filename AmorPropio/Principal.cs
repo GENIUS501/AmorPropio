@@ -334,5 +334,21 @@ namespace AmorPropio
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Reporte_Venta_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                ReporteFacturas frm = new ReporteFacturas();
+                frm.Usuario = UsuarioLogueado.Nombre_Usuario;
+                // frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

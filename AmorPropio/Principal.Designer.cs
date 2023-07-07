@@ -153,6 +153,7 @@
             this.Reporte_Venta.Name = "Reporte_Venta";
             this.Reporte_Venta.Size = new System.Drawing.Size(188, 22);
             this.Reporte_Venta.Text = "Reporte de venta";
+            this.Reporte_Venta.Click += new System.EventHandler(this.Reporte_Venta_Click);
             // 
             // Reporte_Cliente
             // 
