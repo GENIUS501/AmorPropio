@@ -57,7 +57,16 @@ namespace AmorPropio
                 if (this.txt_buscar_codigo.Text != "")
                 {
                     NProductos Negocios = new NProductos();
-                    var datasource = Negocios.Mostrar().Where(x => x.ID_Producto == int.Parse(this.txt_buscar_codigo.Text)).ToList();
+                    var datasource = Negocios.Mostrar().Select(x => new
+                    {
+                        x.ID_Producto,
+                        x.Cantidad,
+                        x.ID_Tipo_Producto,
+                        x.Precio,
+                        x.Descripcion,
+                        x.Nombre,
+                        Imagen = Convert.ToBase64String(x.Imagen)
+                    }).Where(x => x.ID_Producto == int.Parse(this.txt_buscar_codigo.Text)).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();
                     this.reportViewer1.LocalReport.DataSources.Add(Rds);
@@ -81,7 +90,16 @@ namespace AmorPropio
                 if (this.txt_nombre.Text != "")
                 {
                     NProductos Negocios = new NProductos();
-                    var datasource = Negocios.Mostrar().Where(x => x.Nombre.Contains(this.txt_nombre.Text)).ToList();
+                    var datasource = Negocios.Mostrar().Select(x => new
+                    {
+                        x.ID_Producto,
+                        x.Cantidad,
+                        x.ID_Tipo_Producto,
+                        x.Precio,
+                        x.Descripcion,
+                        x.Nombre,
+                        Imagen = Convert.ToBase64String(x.Imagen)
+                    }).Where(x => x.Nombre.Contains(this.txt_nombre.Text)).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();
                     this.reportViewer1.LocalReport.DataSources.Add(Rds);
