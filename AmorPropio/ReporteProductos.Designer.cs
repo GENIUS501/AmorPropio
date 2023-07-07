@@ -108,6 +108,7 @@
             this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
             this.btn_buscar_nombre.TabIndex = 3;
             this.btn_buscar_nombre.UseVisualStyleBackColor = true;
+            this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
             // 
             // btn_buscar
             // 
@@ -118,6 +119,7 @@
             this.btn_buscar.Size = new System.Drawing.Size(25, 20);
             this.btn_buscar.TabIndex = 1;
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // pictureBox1
             // 

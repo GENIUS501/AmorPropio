@@ -486,9 +486,9 @@
                     </TablixCell>
                     <TablixCell>
                       <CellContents>
-                        <Image Name="Image2">
+                        <Image Name="Imagen">
                           <Source>Embedded</Source>
-                          <Value>= "Imagen:" &amp; Convert.ToBase64String(Fields!Imagen.Value)</Value>
+                          <Value>= Convert.ToBase64String(Fields!Imagen.Value)</Value>
                           <Sizing>FitProportional</Sizing>
                           <Style>
                             <Border>
