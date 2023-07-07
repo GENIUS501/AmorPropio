@@ -115,6 +115,7 @@ namespace AmorPropio
                     parameters[0] = new ReportParameter("Usuario", Usuario);
                     parameters[1] = new ReportParameter("Fecha", DateTime.Now.ToString());
                     reportViewer1.LocalReport.SetParameters(parameters);
+                    this.reportViewer1.RefreshReport();
                 }
             }
             catch (Exception ex)
@@ -151,6 +152,7 @@ namespace AmorPropio
                     parameters[0] = new ReportParameter("Usuario", Usuario);
                     parameters[1] = new ReportParameter("Fecha", DateTime.Now.ToString());
                     reportViewer1.LocalReport.SetParameters(parameters);
+                    this.reportViewer1.RefreshReport();
                 }
             }
             catch (Exception ex)
