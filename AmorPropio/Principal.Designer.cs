@@ -97,21 +97,21 @@
             // Clientes
             // 
             this.Clientes.Name = "Clientes";
-            this.Clientes.Size = new System.Drawing.Size(180, 22);
+            this.Clientes.Size = new System.Drawing.Size(175, 22);
             this.Clientes.Text = "Clientes";
             this.Clientes.Click += new System.EventHandler(this.Clientes_Click);
             // 
             // Productos
             // 
             this.Productos.Name = "Productos";
-            this.Productos.Size = new System.Drawing.Size(180, 22);
+            this.Productos.Size = new System.Drawing.Size(175, 22);
             this.Productos.Text = "Productos";
             this.Productos.Click += new System.EventHandler(this.Productos_Click);
             // 
             // Tipo_Productos
             // 
             this.Tipo_Productos.Name = "Tipo_Productos";
-            this.Tipo_Productos.Size = new System.Drawing.Size(180, 22);
+            this.Tipo_Productos.Size = new System.Drawing.Size(175, 22);
             this.Tipo_Productos.Text = "Tipos de Productos";
             this.Tipo_Productos.Click += new System.EventHandler(this.Tipo_Productos_Click);
             // 
@@ -196,6 +196,7 @@
             this.Bitacora_Ingresos.Name = "Bitacora_Ingresos";
             this.Bitacora_Ingresos.Size = new System.Drawing.Size(227, 22);
             this.Bitacora_Ingresos.Text = "Bitacora de ingresos y salidas";
+            this.Bitacora_Ingresos.Click += new System.EventHandler(this.Bitacora_Ingresos_Click);
             // 
             // Bitacora_Movimientos
             // 

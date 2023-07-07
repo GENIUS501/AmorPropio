@@ -302,5 +302,21 @@ namespace AmorPropio
                 MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void Bitacora_Ingresos_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                BitacoraMovimientos frm = new BitacoraMovimientos();
+                frm.Usuario = UsuarioLogueado.Nombre_Usuario;
+                // frm.Id_Rol = UsuarioLogueado.Id_Rol;
+                frm.MdiParent = this;
+                frm.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
