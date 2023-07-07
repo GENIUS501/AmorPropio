@@ -67,15 +67,18 @@ namespace AmorPropio
             this.cbo_tipo_productos.SelectedValue = Obj.ID_Tipo_Producto;
             this.txtPrecio.Text = Obj.Precio.ToString();
             this.txtCantidad.Text = Obj.Cantidad.ToString();
-            byte[] imgData = Obj.Imagen;
-            Image newImage = null;
-            using (MemoryStream ms = new MemoryStream(imgData, 0, imgData.Length))
+            if (Obj.Imagen != null)
             {
-                ms.Write(imgData, 0, imgData.Length);
-                newImage = Image.FromStream(ms, true);
+                byte[] imgData = Obj.Imagen;
+                Image newImage = null;
+                using (MemoryStream ms = new MemoryStream(imgData, 0, imgData.Length))
+                {
+                    ms.Write(imgData, 0, imgData.Length);
+                    newImage = Image.FromStream(ms, true);
+                }
+                ImgProducto.Image = newImage;
+                newImage = null;
             }
-            ImgProducto.Image = newImage;
-            newImage = null;
         }
 
         private void btnCargarImagen_Click(object sender, EventArgs e)
