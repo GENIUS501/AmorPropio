@@ -215,7 +215,7 @@ namespace AmorPropio
                 if (this.txt_nombre.Text != "")
                 {
                     NProductos Negocios = new NProductos();
-                    this.dat_principal.DataSource = Negocios.Mostrar().Where(x => x.Nombre == this.txt_nombre.Text).ToList();
+                    this.dat_principal.DataSource = Negocios.Mostrar().Where(x => x.Nombre.Contains(this.txt_nombre.Text)).ToList();
                 }
             }
             catch (Exception ex)
