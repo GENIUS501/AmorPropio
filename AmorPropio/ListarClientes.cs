@@ -120,8 +120,8 @@ namespace AmorPropio
             {
                 if (this.txt_buscar_cedula.Text != "")
                 {
-                    NTipo_Producto Negocios = new NTipo_Producto();
-                    this.dat_principal.DataSource = Negocios.Mostrar().Where(x => x.ID_Tipo_Producto == int.Parse(this.txt_buscar_cedula.Text)).ToList();
+                    NClientes Negocios = new NClientes();
+                    this.dat_principal.DataSource = Negocios.Mostrar().Where(x => x.Identificacion.Contains(this.txt_buscar_cedula.Text)).ToList();
                 }
             }
             catch (Exception ex)
@@ -136,8 +136,8 @@ namespace AmorPropio
             {
                 if (this.txt_nombre.Text != "")
                 {
-                    NTipo_Producto Negocios = new NTipo_Producto();
-                    this.dat_principal.DataSource = Negocios.Mostrar().Where(x => x.Nombre == this.txt_nombre.Text).ToList();
+                    NClientes Negocios = new NClientes();
+                    this.dat_principal.DataSource = Negocios.Mostrar().Where(x => x.Nombre.Contains(this.txt_nombre.Text)).ToList();
                 }
             }
             catch (Exception ex)

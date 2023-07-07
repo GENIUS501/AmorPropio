@@ -30,15 +30,15 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ReporteFacturas));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.txtnumerofactura = new System.Windows.Forms.MaskedTextBox();
+            this.btn_buscar_nombre = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_buscar = new System.Windows.Forms.Button();
             this.txt_buscar_cedula = new System.Windows.Forms.MaskedTextBox();
             this.txt_nombre = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtnumerofactura = new System.Windows.Forms.MaskedTextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btn_buscar_nombre = new System.Windows.Forms.Button();
-            this.btn_buscar = new System.Windows.Forms.Button();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
@@ -63,6 +63,45 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos de busqueda";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(161, 29);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(95, 13);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Numero de factura";
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(270, 48);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(25, 20);
+            this.button1.TabIndex = 47;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // txtnumerofactura
+            // 
+            this.txtnumerofactura.Location = new System.Drawing.Point(164, 48);
+            this.txtnumerofactura.Mask = "0000000000";
+            this.txtnumerofactura.Name = "txtnumerofactura";
+            this.txtnumerofactura.Size = new System.Drawing.Size(100, 20);
+            this.txtnumerofactura.TabIndex = 46;
+            // 
+            // btn_buscar_nombre
+            // 
+            this.btn_buscar_nombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_nombre.BackgroundImage")));
+            this.btn_buscar_nombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar_nombre.Location = new System.Drawing.Point(115, 102);
+            this.btn_buscar_nombre.Name = "btn_buscar_nombre";
+            this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
+            this.btn_buscar_nombre.TabIndex = 3;
+            this.btn_buscar_nombre.UseVisualStyleBackColor = true;
+            this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -81,6 +120,17 @@
             this.label3.TabIndex = 45;
             this.label3.Text = "Nombre del cliente";
             // 
+            // btn_buscar
+            // 
+            this.btn_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar.BackgroundImage")));
+            this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btn_buscar.Location = new System.Drawing.Point(115, 48);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(25, 20);
+            this.btn_buscar.TabIndex = 1;
+            this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
+            // 
             // txt_buscar_cedula
             // 
             this.txt_buscar_cedula.Location = new System.Drawing.Point(9, 48);
@@ -95,53 +145,6 @@
             this.txt_nombre.Name = "txt_nombre";
             this.txt_nombre.Size = new System.Drawing.Size(100, 20);
             this.txt_nombre.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(161, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 13);
-            this.label2.TabIndex = 48;
-            this.label2.Text = "Numero de factura";
-            // 
-            // txtnumerofactura
-            // 
-            this.txtnumerofactura.Location = new System.Drawing.Point(164, 48);
-            this.txtnumerofactura.Mask = "0000000000";
-            this.txtnumerofactura.Name = "txtnumerofactura";
-            this.txtnumerofactura.Size = new System.Drawing.Size(100, 20);
-            this.txtnumerofactura.TabIndex = 46;
-            // 
-            // button1
-            // 
-            this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Location = new System.Drawing.Point(270, 48);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(25, 20);
-            this.button1.TabIndex = 47;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // btn_buscar_nombre
-            // 
-            this.btn_buscar_nombre.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar_nombre.BackgroundImage")));
-            this.btn_buscar_nombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar_nombre.Location = new System.Drawing.Point(115, 102);
-            this.btn_buscar_nombre.Name = "btn_buscar_nombre";
-            this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar_nombre.TabIndex = 3;
-            this.btn_buscar_nombre.UseVisualStyleBackColor = true;
-            // 
-            // btn_buscar
-            // 
-            this.btn_buscar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscar.BackgroundImage")));
-            this.btn_buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_buscar.Location = new System.Drawing.Point(115, 48);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar.TabIndex = 1;
-            this.btn_buscar.UseVisualStyleBackColor = true;
             // 
             // reportViewer1
             // 
