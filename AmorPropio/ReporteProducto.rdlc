@@ -302,7 +302,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.6cm</Height>
+                  <Height>1.34083cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -487,16 +487,16 @@
                     <TablixCell>
                       <CellContents>
                         <Image Name="Imagen">
-                          <Source>Embedded</Source>
-                          <Value>= Convert.ToBase64String(Fields!Imagen.Value)</Value>
-                          <Sizing>FitProportional</Sizing>
+                          <Source>Database</Source>
+                          <Value>=Fields!Imagen.Value</Value>
+                          <MIMEType>image/jpeg</MIMEType>
+                          <Sizing>Fit</Sizing>
                           <Style>
                             <Border>
                               <Style>None</Style>
                             </Border>
                           </Style>
                         </Image>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -527,7 +527,7 @@
             <DataSetName>DataSet1</DataSetName>
             <Top>0.86692cm</Top>
             <Left>0.26141cm</Left>
-            <Height>1.2cm</Height>
+            <Height>1.94083cm</Height>
             <Width>17.5cm</Width>
             <Style>
               <Border>

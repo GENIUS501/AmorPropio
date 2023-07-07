@@ -25,7 +25,16 @@ namespace AmorPropio
             try
             {
                 NProductos Negocios = new NProductos();
-                var datasource = Negocios.Mostrar();
+                var datasource = Negocios.Mostrar().Select(x => new
+                {
+                    x.ID_Producto,
+                    x.Cantidad,
+                    x.ID_Tipo_Producto,
+                    x.Precio,
+                    x.Descripcion,
+                    x.Nombre,
+                    Imagen = Convert.ToBase64String(x.Imagen)
+                }).ToList();
                 ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                 this.reportViewer1.LocalReport.DataSources.Clear();
                 this.reportViewer1.LocalReport.DataSources.Add(Rds);
