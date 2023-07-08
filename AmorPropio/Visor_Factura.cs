@@ -18,6 +18,7 @@ namespace AmorPropio
         public string Total { get; set; }
         public string Num_Fact { get; set; }
         public string Cantidad_Lineas { get; set; }
+        public string Cliente { get; set; }
         public List<EReporte_Ventas_Detalles> ListaFina { get; set; }
         public Visor_Factura()
         {
@@ -31,12 +32,13 @@ namespace AmorPropio
                 ReportDataSource Rds = new ReportDataSource("DataSet1", ListaFina);
                 this.reportViewer1.LocalReport.DataSources.Clear();
                 this.reportViewer1.LocalReport.DataSources.Add(Rds);
-                ReportParameter[] parameters = new ReportParameter[5];
+                ReportParameter[] parameters = new ReportParameter[6];
                 parameters[0] = new ReportParameter("Usuario", Usuario.ToString());
                 parameters[1] = new ReportParameter("Total", Total.ToString());
                 parameters[2] = new ReportParameter("Num_Fact", Num_Fact.ToString());
                 parameters[3] = new ReportParameter("Cantidad_Lineas", Cantidad_Lineas.ToString());
                 parameters[4] = new ReportParameter("FechaVenta", DateTime.Now.ToString());
+                parameters[5] = new ReportParameter("Cliente", Cliente);
                 reportViewer1.LocalReport.SetParameters(parameters);
                 this.reportViewer1.RefreshReport();
             }

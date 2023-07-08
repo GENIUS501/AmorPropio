@@ -242,6 +242,7 @@ namespace AmorPropio
                         frm.Usuario = Nombre_Usuario;
                         frm.ListaFina = Reporte;
                         frm.Total = Total.ToString();
+                        frm.Cliente = this.lbl_cliente.Text;
                         frm.Cantidad_Lineas = linea.ToString();
                         frm.MdiParent = this.MdiParent;
                         frm.Show();

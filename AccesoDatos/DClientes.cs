@@ -53,7 +53,14 @@ namespace AccesoDatos
             }
             catch (Exception ex)
             {
-                throw ex;
+                if (ex.InnerException.HResult== -2146233087)
+                {
+                    throw new Exception("La cedula ingresada ya existe en el sistema");
+                }
+                else
+                {
+                    throw ex;
+                }   
             }
         }
         #endregion
