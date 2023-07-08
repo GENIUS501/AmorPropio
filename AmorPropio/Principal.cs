@@ -73,7 +73,7 @@ namespace AmorPropio
                     Mantenimientos.Visible = true;
                     Tipo_Productos.Visible = true;
                 }
-                if (perm.Where(x => x.Modulo == "ReporteVentas" || x.Modulo == "ReporteMaquinas" || x.Modulo == "ReporteLoterias" || x.Modulo == "BitacoraSesiones").FirstOrDefault() != null)
+                if (perm.Where(x => x.Modulo == "ReporteVentas" || x.Modulo == "ReporteClientes" || x.Modulo == "ReporteProductos").FirstOrDefault() != null)
                 {
                     Reportes.Visible = true;
                 }
@@ -91,10 +91,12 @@ namespace AmorPropio
                 }
                 if (perm.Where(x => x.Modulo == "BitacoraSesiones").FirstOrDefault() != null)
                 {
+                    Seguridad.Visible = true;
                     Bitacora_Ingresos.Visible = true;
                 }
                 if (perm.Where(x => x.Modulo == "BitacoraMovimientos").FirstOrDefault() != null)
                 {
+                    Seguridad.Visible = true;
                     Bitacora_Movimientos.Visible = true;
                 }
                 if (perm.Where(x => x.Modulo == "ProcesoVentas").FirstOrDefault() != null)
