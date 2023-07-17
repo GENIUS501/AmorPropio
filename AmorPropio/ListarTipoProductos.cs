@@ -104,7 +104,7 @@ namespace AmorPropio
                     }
                     else
                     {
-                        MessageBox.Show("Debe seleccionar un usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Debe seleccionar un tipo de producto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
@@ -204,7 +204,7 @@ namespace AmorPropio
                 }
                 else
                 {
-                    MessageBox.Show("Debe seleccionar un usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Debe seleccionar un tipo de producto!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception)

@@ -137,7 +137,7 @@ namespace AmorPropio
                 if (this.txt_nombre.Text != "")
                 {
                     NClientes Negocios = new NClientes();
-                    this.dat_principal.DataSource = Negocios.Mostrar().Where(x => x.Nombre.Contains(this.txt_nombre.Text)).ToList();
+                    this.dat_principal.DataSource = Negocios.Mostrar().Where(x => x.Nombre.ToUpper().Contains(this.txt_nombre.Text.ToUpper())).ToList();
                 }
             }
             catch (Exception ex)
