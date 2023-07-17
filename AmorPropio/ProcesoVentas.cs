@@ -31,6 +31,7 @@ namespace AmorPropio
             try
             {
                 lst_productos.Items.Clear();
+                this.txt_impuesto.Text = "13";
             }
             catch (Exception ex)
             {
