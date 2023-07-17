@@ -112,6 +112,7 @@
             this.linkLabel1.TabIndex = 94;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Ayuda";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // About
             // 
@@ -128,6 +129,7 @@
             this.Controls.Add(this.label1);
             this.Name = "About";
             this.Text = "About";
+            this.Load += new System.EventHandler(this.About_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

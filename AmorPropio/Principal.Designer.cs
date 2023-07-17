@@ -50,6 +50,7 @@
             this.Salir = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.Txt_Usuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -62,6 +63,7 @@
             this.Procesos,
             this.Reportes,
             this.Seguridad,
+            this.acercaDeToolStripMenuItem,
             this.Salir});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -230,6 +232,13 @@
             this.Txt_Usuario.Name = "Txt_Usuario";
             this.Txt_Usuario.Size = new System.Drawing.Size(0, 17);
             // 
+            // acercaDeToolStripMenuItem
+            // 
+            this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
+            this.acercaDeToolStripMenuItem.Text = "Acerca de";
+            this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -280,5 +289,6 @@
         private System.Windows.Forms.ToolStripMenuItem Bitacora_Ingresos;
         private System.Windows.Forms.ToolStripMenuItem Bitacora_Movimientos;
         private System.Windows.Forms.ToolStripMenuItem reingresarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
     }
 }
