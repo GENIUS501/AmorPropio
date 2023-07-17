@@ -29,8 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProcesoVentas));
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.grp_venta = new System.Windows.Forms.GroupBox();
+            this.cbo_tipo_pago = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txt_codigo = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
             this.btn_add_cliente = new System.Windows.Forms.Button();
@@ -55,9 +58,6 @@
             this.txt_impuesto = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
-            this.txt_codigo = new System.Windows.Forms.MaskedTextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.cbo_tipo_pago = new System.Windows.Forms.ComboBox();
             this.grp_venta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dat_resultado)).BeginInit();
             this.SuspendLayout();
@@ -92,6 +92,36 @@
             this.grp_venta.TabStop = false;
             this.grp_venta.Text = "Venta";
             // 
+            // cbo_tipo_pago
+            // 
+            this.cbo_tipo_pago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbo_tipo_pago.FormattingEnabled = true;
+            this.cbo_tipo_pago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Tarjeta",
+            "Sinpe"});
+            this.cbo_tipo_pago.Location = new System.Drawing.Point(101, 375);
+            this.cbo_tipo_pago.Name = "cbo_tipo_pago";
+            this.cbo_tipo_pago.Size = new System.Drawing.Size(121, 21);
+            this.cbo_tipo_pago.TabIndex = 9;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(98, 360);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(70, 13);
+            this.label9.TabIndex = 64;
+            this.label9.Text = "Tipo de pago";
+            // 
+            // txt_codigo
+            // 
+            this.txt_codigo.Location = new System.Drawing.Point(9, 31);
+            this.txt_codigo.Mask = "000000000";
+            this.txt_codigo.Name = "txt_codigo";
+            this.txt_codigo.Size = new System.Drawing.Size(124, 20);
+            this.txt_codigo.TabIndex = 0;
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -107,7 +137,7 @@
             this.txt_cedula.Mask = "000000000000";
             this.txt_cedula.Name = "txt_cedula";
             this.txt_cedula.Size = new System.Drawing.Size(124, 20);
-            this.txt_cedula.TabIndex = 5;
+            this.txt_cedula.TabIndex = 4;
             // 
             // btn_add_cliente
             // 
@@ -115,7 +145,7 @@
             this.btn_add_cliente.Location = new System.Drawing.Point(515, 31);
             this.btn_add_cliente.Name = "btn_add_cliente";
             this.btn_add_cliente.Size = new System.Drawing.Size(28, 21);
-            this.btn_add_cliente.TabIndex = 6;
+            this.btn_add_cliente.TabIndex = 5;
             this.btn_add_cliente.UseVisualStyleBackColor = true;
             this.btn_add_cliente.Click += new System.EventHandler(this.btn_add_cliente_Click);
             // 
@@ -143,7 +173,7 @@
             this.btn_buscar_nombre.Location = new System.Drawing.Point(309, 32);
             this.btn_buscar_nombre.Name = "btn_buscar_nombre";
             this.btn_buscar_nombre.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar_nombre.TabIndex = 4;
+            this.btn_buscar_nombre.TabIndex = 3;
             this.btn_buscar_nombre.UseVisualStyleBackColor = true;
             this.btn_buscar_nombre.Click += new System.EventHandler(this.btn_buscar_nombre_Click);
             // 
@@ -154,7 +184,7 @@
             this.btn_buscar_codigo.Location = new System.Drawing.Point(136, 31);
             this.btn_buscar_codigo.Name = "btn_buscar_codigo";
             this.btn_buscar_codigo.Size = new System.Drawing.Size(25, 20);
-            this.btn_buscar_codigo.TabIndex = 2;
+            this.btn_buscar_codigo.TabIndex = 1;
             this.btn_buscar_codigo.UseVisualStyleBackColor = true;
             this.btn_buscar_codigo.Click += new System.EventHandler(this.btn_buscar_codigo_Click);
             // 
@@ -187,13 +217,13 @@
             this.lst_productos.FullRowSelect = true;
             this.lst_productos.GridLines = true;
             this.lst_productos.HideSelection = false;
-            listViewItem2.StateImageIndex = 0;
+            listViewItem1.StateImageIndex = 0;
             this.lst_productos.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.lst_productos.Location = new System.Drawing.Point(6, 221);
             this.lst_productos.Name = "lst_productos";
             this.lst_productos.Size = new System.Drawing.Size(547, 136);
-            this.lst_productos.TabIndex = 49;
+            this.lst_productos.TabIndex = 7;
             this.lst_productos.UseCompatibleStateImageBehavior = false;
             this.lst_productos.View = System.Windows.Forms.View.Details;
             this.lst_productos.ItemCheck += new System.Windows.Forms.ItemCheckEventHandler(this.lst_productos_ItemCheck);
@@ -228,7 +258,7 @@
             this.dat_resultado.Location = new System.Drawing.Point(6, 88);
             this.dat_resultado.Name = "dat_resultado";
             this.dat_resultado.Size = new System.Drawing.Size(546, 103);
-            this.dat_resultado.TabIndex = 48;
+            this.dat_resultado.TabIndex = 6;
             this.dat_resultado.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dat_resultado_CellClick);
             // 
             // label6
@@ -245,7 +275,7 @@
             this.txt_nombre_producto.Location = new System.Drawing.Point(176, 32);
             this.txt_nombre_producto.Name = "txt_nombre_producto";
             this.txt_nombre_producto.Size = new System.Drawing.Size(124, 20);
-            this.txt_nombre_producto.TabIndex = 3;
+            this.txt_nombre_producto.TabIndex = 2;
             // 
             // label7
             // 
@@ -271,7 +301,7 @@
             this.txt_total.Location = new System.Drawing.Point(453, 385);
             this.txt_total.Name = "txt_total";
             this.txt_total.Size = new System.Drawing.Size(100, 20);
-            this.txt_total.TabIndex = 42;
+            this.txt_total.TabIndex = 10;
             // 
             // label3
             // 
@@ -287,7 +317,7 @@
             this.txt_impuesto.Location = new System.Drawing.Point(6, 376);
             this.txt_impuesto.Name = "txt_impuesto";
             this.txt_impuesto.Size = new System.Drawing.Size(47, 20);
-            this.txt_impuesto.TabIndex = 0;
+            this.txt_impuesto.TabIndex = 8;
             this.txt_impuesto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_impuesto_KeyPress);
             // 
             // btnCancelar
@@ -298,7 +328,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(304, 446);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(83, 23);
-            this.btnCancelar.TabIndex = 47;
+            this.btnCancelar.TabIndex = 1;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -312,41 +342,11 @@
             this.btnAceptar.Location = new System.Drawing.Point(188, 446);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(79, 23);
-            this.btnAceptar.TabIndex = 46;
+            this.btnAceptar.TabIndex = 0;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
-            // 
-            // txt_codigo
-            // 
-            this.txt_codigo.Location = new System.Drawing.Point(9, 31);
-            this.txt_codigo.Mask = "000000000";
-            this.txt_codigo.Name = "txt_codigo";
-            this.txt_codigo.Size = new System.Drawing.Size(124, 20);
-            this.txt_codigo.TabIndex = 63;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(98, 360);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(70, 13);
-            this.label9.TabIndex = 64;
-            this.label9.Text = "Tipo de pago";
-            // 
-            // cbo_tipo_pago
-            // 
-            this.cbo_tipo_pago.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbo_tipo_pago.FormattingEnabled = true;
-            this.cbo_tipo_pago.Items.AddRange(new object[] {
-            "Efectivo",
-            "Tarjeta",
-            "Sinpe"});
-            this.cbo_tipo_pago.Location = new System.Drawing.Point(101, 375);
-            this.cbo_tipo_pago.Name = "cbo_tipo_pago";
-            this.cbo_tipo_pago.Size = new System.Drawing.Size(121, 21);
-            this.cbo_tipo_pago.TabIndex = 65;
             // 
             // ProcesoVentas
             // 
