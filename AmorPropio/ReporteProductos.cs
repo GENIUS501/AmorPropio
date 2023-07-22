@@ -106,7 +106,7 @@ namespace AmorPropio
                     ReportParameter[] parameters = new ReportParameter[2];
                     parameters[0] = new ReportParameter("Usuario", Usuario);
                     parameters[1] = new ReportParameter("Fecha", DateTime.Now.ToString());
-                    reportViewer1.LocalReport.SetParameters(parameters);
+                    reportViewer1.LocalReport.SetParameters(parameters); 
                     this.reportViewer1.RefreshReport();
                 }
             }
