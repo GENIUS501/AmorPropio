@@ -104,7 +104,7 @@ namespace AmorPropio
                     }
                     else
                     {
-                        MessageBox.Show("Debe seleccionar un usuario!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Debe seleccionar un cliente!!!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
