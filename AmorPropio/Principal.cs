@@ -186,6 +186,8 @@ namespace AmorPropio
             try
             {
                 ListaRolesyPermisos showRols = new ListaRolesyPermisos();
+                showRols.MaximizeBox = false;
+                showRols.AutoSizeMode=AutoSizeMode.GrowAndShrink;
                 showRols.Usuario = UsuarioLogueado.ID_Usuario;
                 showRols.Id_Rol = UsuarioLogueado.Id_Rol;
                 showRols.MdiParent = this;
@@ -202,6 +204,8 @@ namespace AmorPropio
             try
             {
                 ListarUsuarios frm = new ListarUsuarios();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 frm.Usuario = UsuarioLogueado.ID_Usuario;
                 frm.Id_Rol = UsuarioLogueado.Id_Rol;
                 frm.MdiParent = this;
@@ -230,6 +234,8 @@ namespace AmorPropio
             try
             {
                 ListarTipoProductos frm = new ListarTipoProductos();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 frm.Usuario = UsuarioLogueado.ID_Usuario;
                 frm.Id_Rol = UsuarioLogueado.Id_Rol;
                 frm.MdiParent = this;
@@ -246,6 +252,8 @@ namespace AmorPropio
             try
             {
                 ListaProductos frm = new ListaProductos();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 frm.Usuario = UsuarioLogueado.ID_Usuario;
                 frm.Id_Rol = UsuarioLogueado.Id_Rol;
                 frm.MdiParent = this;
@@ -262,6 +270,8 @@ namespace AmorPropio
             try
             {
                 ListarClientes frm = new ListarClientes();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 frm.Usuario = UsuarioLogueado.ID_Usuario;
                 frm.Id_Rol = UsuarioLogueado.Id_Rol;
                 frm.MdiParent = this;
@@ -278,6 +288,8 @@ namespace AmorPropio
             try
             {
                 ProcesoVentas frm = new ProcesoVentas();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 frm.Usuario = UsuarioLogueado.ID_Usuario;
                 frm.Nombre_Usuario = UsuarioLogueado.Nombre_Usuario;
                 frm.MdiParent = this;
@@ -294,6 +306,8 @@ namespace AmorPropio
             try
             {
                 ProcesoDevolucion frm = new ProcesoDevolucion();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 frm.Usuario = UsuarioLogueado.ID_Usuario;
                 // frm.Id_Rol = UsuarioLogueado.Id_Rol;
                 frm.MdiParent = this;
@@ -310,6 +324,8 @@ namespace AmorPropio
             try
             {
                 BitacoraSesiones frm = new BitacoraSesiones();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 frm.Usuariologueado = UsuarioLogueado.Nombre_Usuario;
                 // frm.Id_Rol = UsuarioLogueado.Id_Rol;
                 frm.MdiParent = this;
@@ -326,6 +342,8 @@ namespace AmorPropio
             try
             {
                 BitacoraMovimientos frm = new BitacoraMovimientos();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 frm.Usuario = UsuarioLogueado.Nombre_Usuario;
                 // frm.Id_Rol = UsuarioLogueado.Id_Rol;
                 frm.MdiParent = this;
@@ -342,6 +360,8 @@ namespace AmorPropio
             try
             {
                 ReporteFacturas frm = new ReporteFacturas();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 frm.Usuario = UsuarioLogueado.Nombre_Usuario;
                 // frm.Id_Rol = UsuarioLogueado.Id_Rol;
                 frm.MdiParent = this;
@@ -358,6 +378,8 @@ namespace AmorPropio
             try
             {
                 ReporteCliente frm = new ReporteCliente();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 frm.Usuario = UsuarioLogueado.Nombre_Usuario;
                 // frm.Id_Rol = UsuarioLogueado.Id_Rol;
                 frm.MdiParent = this;
@@ -374,6 +396,8 @@ namespace AmorPropio
             try
             {
                 ReporteProductos frm = new ReporteProductos();
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
                 frm.Usuario = UsuarioLogueado.Nombre_Usuario;
                 // frm.Id_Rol = UsuarioLogueado.Id_Rol;
                 frm.MdiParent = this;
@@ -390,7 +414,9 @@ namespace AmorPropio
             try
             {
                 About frm = new About();
-               // frm.Usuario = UsuarioLogueado.Nombre_Usuario;
+                frm.MaximizeBox = false;
+                frm.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+                // frm.Usuario = UsuarioLogueado.Nombre_Usuario;
                 // frm.Id_Rol = UsuarioLogueado.Id_Rol;
                 frm.MdiParent = this;
                 frm.Show();

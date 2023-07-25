@@ -33,6 +33,10 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txt_telefono = new System.Windows.Forms.MaskedTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txt_correo = new System.Windows.Forms.TextBox();
             this.txt_apellido2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_apellido1 = new System.Windows.Forms.TextBox();
@@ -52,10 +56,6 @@
             this.txt_cedula = new System.Windows.Forms.MaskedTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.label8 = new System.Windows.Forms.Label();
-            this.txt_correo = new System.Windows.Forms.TextBox();
-            this.txt_telefono = new System.Windows.Forms.MaskedTextBox();
-            this.label11 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
@@ -118,6 +118,39 @@
             this.groupBox1.TabIndex = 14;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Usuario";
+            // 
+            // txt_telefono
+            // 
+            this.txt_telefono.Location = new System.Drawing.Point(142, 252);
+            this.txt_telefono.Mask = "00000000";
+            this.txt_telefono.Name = "txt_telefono";
+            this.txt_telefono.Size = new System.Drawing.Size(100, 20);
+            this.txt_telefono.TabIndex = 26;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(139, 236);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(49, 13);
+            this.label11.TabIndex = 27;
+            this.label11.Text = "Teléfono";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(6, 236);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(93, 13);
+            this.label8.TabIndex = 25;
+            this.label8.Text = "Correo electronico";
+            // 
+            // txt_correo
+            // 
+            this.txt_correo.Location = new System.Drawing.Point(9, 252);
+            this.txt_correo.Name = "txt_correo";
+            this.txt_correo.Size = new System.Drawing.Size(104, 20);
+            this.txt_correo.TabIndex = 24;
             // 
             // txt_apellido2
             // 
@@ -274,47 +307,16 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 236);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(93, 13);
-            this.label8.TabIndex = 25;
-            this.label8.Text = "Correo electronico";
-            // 
-            // txt_correo
-            // 
-            this.txt_correo.Location = new System.Drawing.Point(9, 252);
-            this.txt_correo.Name = "txt_correo";
-            this.txt_correo.Size = new System.Drawing.Size(104, 20);
-            this.txt_correo.TabIndex = 24;
-            // 
-            // txt_telefono
-            // 
-            this.txt_telefono.Location = new System.Drawing.Point(142, 252);
-            this.txt_telefono.Mask = "00000000";
-            this.txt_telefono.Name = "txt_telefono";
-            this.txt_telefono.Size = new System.Drawing.Size(100, 20);
-            this.txt_telefono.TabIndex = 26;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(139, 236);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 13);
-            this.label11.TabIndex = 27;
-            this.label11.Text = "Teléfono";
-            // 
             // Mantenimiento_Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(279, 385);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "Mantenimiento_Usuarios";
             this.Text = "Mantenimiento_Usuarios";
             this.Load += new System.EventHandler(this.Mantenimiento_Usuarios_Load);

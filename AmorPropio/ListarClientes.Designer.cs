@@ -198,6 +198,7 @@
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_agregar);
             this.Controls.Add(this.groupBox1);
+            this.MaximizeBox = false;
             this.Name = "ListarClientes";
             this.Text = "ListarClientes";
             this.Load += new System.EventHandler(this.ListarClientes_Load);

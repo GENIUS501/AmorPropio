@@ -497,11 +497,6 @@
             "AssemblyAsmDisplayName" = "8:stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_07F0D23A86354C2A9906F3E8ADFFF24A"
-                    {
-                    "Name" = "8:stdole.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\AmorPropio\\bin\\Release\\stdole.dll"
             "TargetName" = "8:"
@@ -528,11 +523,6 @@
             "AssemblyAsmDisplayName" = "8:AccesoDatos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_0A34CC45F052432B8921DF8E985028CC"
-                    {
-                    "Name" = "8:AccesoDatos.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\AmorPropio\\bin\\Release\\AccesoDatos.dll"
             "TargetName" = "8:"
@@ -559,11 +549,6 @@
             "AssemblyAsmDisplayName" = "8:EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_13A5D736422D4624B16B395146BA232F"
-                    {
-                    "Name" = "8:EntityFramework.SqlServer.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\AmorPropio\\bin\\Release\\EntityFramework.SqlServer.dll"
             "TargetName" = "8:"
@@ -590,11 +575,6 @@
             "AssemblyAsmDisplayName" = "8:EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_16316A6CC01F84D3269BC2F4F6C9E762"
-                    {
-                    "Name" = "8:EnvDTE.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:EnvDTE.dll"
             "TargetName" = "8:"
@@ -621,11 +601,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_1BA0D4D93A9645679EB9AA132E58273A"
-                    {
-                    "Name" = "8:Microsoft.ReportViewer.WebForms.DLL"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\AmorPropio\\bin\\Release\\Microsoft.ReportViewer.WebForms.DLL"
             "TargetName" = "8:"
@@ -652,11 +627,6 @@
             "AssemblyAsmDisplayName" = "8:EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_1FC98D31B06382A0BEF294EB041243FE"
-                    {
-                    "Name" = "8:EntityFramework.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:EntityFramework.dll"
             "TargetName" = "8:"
@@ -683,11 +653,6 @@
             "AssemblyAsmDisplayName" = "8:AccesoDatos, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_21F4247670A85D4FFA0BA6B8F757EA46"
-                    {
-                    "Name" = "8:AccesoDatos.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:AccesoDatos.dll"
             "TargetName" = "8:"
@@ -714,11 +679,6 @@
             "AssemblyAsmDisplayName" = "8:EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"
                 "ScatterAssemblies"
                 {
-                    "_24530AB69948478EAC298AC824DC27BE"
-                    {
-                    "Name" = "8:EnvDTE.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\AmorPropio\\bin\\Release\\EnvDTE.dll"
             "TargetName" = "8:"
@@ -745,11 +705,6 @@
             "AssemblyAsmDisplayName" = "8:AmorPropio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_4D010BE1F6884FEABF331FA65F6BA729"
-                    {
-                    "Name" = "8:AmorPropio.exe"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\AmorPropio\\bin\\Release\\AmorPropio.exe"
             "TargetName" = "8:"
@@ -776,11 +731,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_7DD9A7050610440EA2963E93B0C3BE2F"
-                    {
-                    "Name" = "8:Microsoft.ReportViewer.DataVisualization.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\AmorPropio\\bin\\Release\\Microsoft.ReportViewer.DataVisualization.dll"
             "TargetName" = "8:"
@@ -827,11 +777,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_89ECCEB5712241CD97347CE5D2A7E0BC"
-                    {
-                    "Name" = "8:Microsoft.ReportViewer.Common.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\AmorPropio\\bin\\Release\\Microsoft.ReportViewer.Common.dll"
             "TargetName" = "8:"
@@ -898,11 +843,6 @@
             "AssemblyAsmDisplayName" = "8:Negocios, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_A44867FB6E8B4BAC0ED58E812F0DCD7E"
-                    {
-                    "Name" = "8:Negocios.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Negocios.dll"
             "TargetName" = "8:"
@@ -929,11 +869,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_AE2C1B118C1D49EB838453588E0828DB"
-                    {
-                    "Name" = "8:Microsoft.ReportViewer.WinForms.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\AmorPropio\\bin\\Release\\Microsoft.ReportViewer.WinForms.dll"
             "TargetName" = "8:"
@@ -980,11 +915,6 @@
             "AssemblyAsmDisplayName" = "8:EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_B2F488EBCF584C34BBEAE43B8877C4C2"
-                    {
-                    "Name" = "8:EntityFramework.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\AmorPropio\\bin\\Release\\EntityFramework.dll"
             "TargetName" = "8:"
@@ -1031,11 +961,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_BA378734483C4F23A17BFB8320E27138"
-                    {
-                    "Name" = "8:Microsoft.ReportViewer.Common.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.ReportViewer.Common.dll"
             "TargetName" = "8:"
@@ -1062,11 +987,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_BBA5FDF7257E47F08318D2CD91A8EBB9"
-                    {
-                    "Name" = "8:Microsoft.SqlServer.Types.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\AmorPropio\\bin\\Release\\Microsoft.SqlServer.Types.dll"
             "TargetName" = "8:"
@@ -1093,11 +1013,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_C75C8318632741BC83D3F04C7C179177"
-                    {
-                    "Name" = "8:Microsoft.ReportViewer.Design.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\AmorPropio\\bin\\Release\\Microsoft.ReportViewer.Design.dll"
             "TargetName" = "8:"
@@ -1144,11 +1059,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_CC6328E5B81F44CDDCD1B245DD4F5301"
-                    {
-                    "Name" = "8:Microsoft.ReportViewer.WinForms.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.ReportViewer.WinForms.dll"
             "TargetName" = "8:"
@@ -1175,11 +1085,6 @@
             "AssemblyAsmDisplayName" = "8:Entidades, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_D33FFE52447166E81EFD62855C19CEF0"
-                    {
-                    "Name" = "8:Entidades.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Entidades.dll"
             "TargetName" = "8:"
@@ -1206,11 +1111,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.SqlServer.Types, Version=16.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_DB89DA1A14349FA9C5AACD15E9E674AB"
-                    {
-                    "Name" = "8:Microsoft.SqlServer.Types.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.SqlServer.Types.dll"
             "TargetName" = "8:"
@@ -1237,11 +1137,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_DF31A27042D474CB482594DB896EFAED"
-                    {
-                    "Name" = "8:Microsoft.ReportViewer.DataVisualization.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.ReportViewer.DataVisualization.dll"
             "TargetName" = "8:"
@@ -1268,11 +1163,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_E46A7A6A2ED4BA37940503A4DE1C049C"
-                    {
-                    "Name" = "8:Microsoft.ReportViewer.ProcessingObjectModel.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:Microsoft.ReportViewer.ProcessingObjectModel.dll"
             "TargetName" = "8:"
@@ -1330,11 +1220,6 @@
             "AssemblyAsmDisplayName" = "8:Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_F048B23D720E453C916DF2583A2CC182"
-                    {
-                    "Name" = "8:Microsoft.ReportViewer.ProcessingObjectModel.dll"
-                    "Attributes" = "3:512"
-                    }
                 }
             "SourcePath" = "8:..\\AmorPropio\\bin\\Release\\Microsoft.ReportViewer.ProcessingObjectModel.dll"
             "TargetName" = "8:"
@@ -1542,20 +1427,6 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_9D1D1D043C1946DA80B534DA19728938"
-            {
-            "Name" = "8:SCIV"
-            "Arguments" = "8:"
-            "Description" = "8:"
-            "ShowCmd" = "3:1"
-            "IconIndex" = "3:0"
-            "Transitive" = "11:FALSE"
-            "Target" = "8:_11E299AF21CF47738D41AF51378D9C81"
-            "Folder" = "8:_11E299AF21CF47738D41AF51378D9C81"
-            "WorkingFolder" = "8:_11E299AF21CF47738D41AF51378D9C81"
-            "Icon" = "8:"
-            "Feature" = "8:"
-            }
         }
         "UserInterface"
         {

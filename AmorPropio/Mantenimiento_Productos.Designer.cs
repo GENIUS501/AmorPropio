@@ -275,10 +275,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(385, 505);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.Grp_Productos);
             this.Controls.Add(this.btnAceptar);
+            this.MaximizeBox = false;
             this.Name = "Mantenimiento_Productos";
             this.Text = "MantenimientoProductos";
             this.Load += new System.EventHandler(this.Mantenimiento_Productos_Load);

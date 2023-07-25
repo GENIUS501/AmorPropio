@@ -202,6 +202,7 @@
             this.Controls.Add(this.dat_principal);
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.btn_agregar);
+            this.MaximizeBox = false;
             this.Name = "ListaProductos";
             this.Text = "ListaProductos";
             this.Load += new System.EventHandler(this.ListaProductos_Load);
