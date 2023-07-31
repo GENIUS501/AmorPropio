@@ -84,9 +84,9 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(6, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(63, 13);
+            this.label3.Size = new System.Drawing.Size(95, 13);
             this.label3.TabIndex = 45;
-            this.label3.Text = "ID de venta";
+            this.label3.Text = "Numero de factura";
             // 
             // btn_buscar
             // 

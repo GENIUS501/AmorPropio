@@ -260,15 +260,15 @@ namespace AmorPropio
                 {
                     if (IDCliente == 0)
                     {
-                        MessageBox.Show("De agregar un cliente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Debe agregar un cliente!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     if (lst_productos.Items.Count == 0)
                     {
-                        MessageBox.Show("De agregar productos!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Debe agregar productos!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     if (this.txt_impuesto.Text != "")
                     {
-                        MessageBox.Show("De agregar el impuesto!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Debe agregar el impuesto!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }

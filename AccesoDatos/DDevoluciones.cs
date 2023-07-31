@@ -178,7 +178,9 @@ namespace AccesoDatos
                             ID_Cliente = Item.ID_Cliente,
                             Total = Item.Total,
                             ID_Usuario = Item.ID_Usuario,
-                            Numero_factura = Item.Numero_factura
+                            Numero_factura = Item.Numero_factura,
+                            Tipo_pago = Item.Tipo_pago,
+                            Fecha_venta = Item.Fecha_venta
                         });
                     }
                 }
@@ -208,7 +210,9 @@ namespace AccesoDatos
                             ID_Cliente = Item.ID_Cliente,
                             Total = Item.Total,
                             ID_Usuario = Item.ID_Usuario,
-                            Numero_factura = Item.Numero_factura
+                            Numero_factura = Item.Numero_factura,
+                            Tipo_pago=Item.Tipo_pago,
+                            Fecha_venta=Item.Fecha_venta
                         });
                     }
                 }
