@@ -1,0 +1,14 @@
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\AccesoDatos\bin\Release\AccesoDatos.dll.config
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\AccesoDatos\bin\Release\AccesoDatos.dll
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\AccesoDatos\bin\Release\AccesoDatos.pdb
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\AccesoDatos\bin\Release\Entidades.dll
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\AccesoDatos\bin\Release\EntityFramework.dll
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\AccesoDatos\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\AccesoDatos\bin\Release\Entidades.pdb
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\AccesoDatos\bin\Release\EntityFramework.xml
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\AccesoDatos\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\AccesoDatos\obj\Release\AccesoDatos.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\AccesoDatos\obj\Release\AccesoDatos.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\AccesoDatos\obj\Release\AccesoDatos.csproj.CopyComplete
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\AccesoDatos\obj\Release\AccesoDatos.dll
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\AccesoDatos\obj\Release\AccesoDatos.pdb

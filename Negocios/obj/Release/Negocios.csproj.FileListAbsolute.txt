@@ -1,0 +1,14 @@
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\Negocios\bin\Release\Negocios.dll
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\Negocios\bin\Release\Negocios.pdb
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\Negocios\bin\Release\AccesoDatos.dll
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\Negocios\bin\Release\Entidades.dll
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\Negocios\bin\Release\EntityFramework.dll
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\Negocios\bin\Release\AccesoDatos.pdb
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\Negocios\bin\Release\AccesoDatos.dll.config
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\Negocios\bin\Release\Entidades.pdb
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\Negocios\bin\Release\EntityFramework.xml
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\Negocios\obj\Release\Negocios.csproj.AssemblyReference.cache
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\Negocios\obj\Release\Negocios.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\Negocios\obj\Release\Negocios.csproj.CopyComplete
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\Negocios\obj\Release\Negocios.dll
+C:\Users\Dell\source\repos\AmorPropioGit\AmorPropio\Negocios\obj\Release\Negocios.pdb

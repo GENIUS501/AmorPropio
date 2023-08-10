@@ -36,7 +36,8 @@ namespace AmorPropio
                     Direccion = NegociosClientes.Mostrar().Where(c => c.ID_Cliente == x.ID_Cliente).FirstOrDefault().Direccion,
                     Telefono = NegociosClientes.Mostrar().Where(c => c.ID_Cliente == x.ID_Cliente).FirstOrDefault().Telefono,
                     Correo = NegociosClientes.Mostrar().Where(c => c.ID_Cliente == x.ID_Cliente).FirstOrDefault().Correo,
-                    TipoVenta = x.Tipo_pago
+                    TipoVenta = x.Tipo_pago,
+                    Monto=x.Total
                 }).ToList();
                 ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                 this.reportViewer1.LocalReport.DataSources.Clear();
@@ -70,7 +71,8 @@ namespace AmorPropio
                         Direccion = NegociosClientes.Mostrar().Where(c => c.ID_Cliente == x.ID_Cliente).FirstOrDefault().Direccion,
                         Telefono = NegociosClientes.Mostrar().Where(c => c.ID_Cliente == x.ID_Cliente).FirstOrDefault().Telefono,
                         Correo = NegociosClientes.Mostrar().Where(c => c.ID_Cliente == x.ID_Cliente).FirstOrDefault().Correo,
-                        TipoVenta = x.Tipo_pago
+                        TipoVenta = x.Tipo_pago,
+                        Monto = x.Total
                     }).Where(d => d.Cedula.Contains(this.txt_buscar_cedula.Text)).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();
@@ -106,7 +108,8 @@ namespace AmorPropio
                         Direccion = NegociosClientes.Mostrar().Where(c => c.ID_Cliente == x.ID_Cliente).FirstOrDefault().Direccion,
                         Telefono = NegociosClientes.Mostrar().Where(c => c.ID_Cliente == x.ID_Cliente).FirstOrDefault().Telefono,
                         Correo = NegociosClientes.Mostrar().Where(c => c.ID_Cliente == x.ID_Cliente).FirstOrDefault().Correo,
-                        TipoVenta = x.Tipo_pago
+                        TipoVenta = x.Tipo_pago,
+                        Monto = x.Total
                     }).Where(d => d.Nombre.Contains(this.txt_buscar_cedula.Text)).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();
@@ -143,7 +146,8 @@ namespace AmorPropio
                         Direccion = NegociosClientes.Mostrar().Where(c => c.ID_Cliente == x.ID_Cliente).FirstOrDefault().Direccion,
                         Telefono = NegociosClientes.Mostrar().Where(c => c.ID_Cliente == x.ID_Cliente).FirstOrDefault().Telefono,
                         Correo = NegociosClientes.Mostrar().Where(c => c.ID_Cliente == x.ID_Cliente).FirstOrDefault().Correo,
-                        TipoVenta = x.Tipo_pago
+                        TipoVenta = x.Tipo_pago,
+                        Monto = x.Total
                     }).Where(d => d.NumeroFactura==NumeroFactura).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();

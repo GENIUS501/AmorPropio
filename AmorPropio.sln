@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Enti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AmorPropio", "AmorPropio\AmorPropio.csproj", "{1C2DF4CE-59E8-4171-9A32-CEB962465DE6}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SIV", "SIV\SIV.vdproj", "{4C043233-CB73-4307-97A3-642504F81F8D}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SIV", "SIV\SIV.vdproj", "{0ADEC9A5-5393-4312-B269-D6659BD15FAC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,8 +35,8 @@ Global
 		{1C2DF4CE-59E8-4171-9A32-CEB962465DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C2DF4CE-59E8-4171-9A32-CEB962465DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C2DF4CE-59E8-4171-9A32-CEB962465DE6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4C043233-CB73-4307-97A3-642504F81F8D}.Debug|Any CPU.ActiveCfg = Debug
-		{4C043233-CB73-4307-97A3-642504F81F8D}.Release|Any CPU.ActiveCfg = Release
+		{0ADEC9A5-5393-4312-B269-D6659BD15FAC}.Debug|Any CPU.ActiveCfg = Debug
+		{0ADEC9A5-5393-4312-B269-D6659BD15FAC}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

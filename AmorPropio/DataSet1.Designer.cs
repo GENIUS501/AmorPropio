@@ -1367,6 +1367,8 @@ namespace AmorPropio {
             
             private global::System.Data.DataColumn columnTipoventa;
             
+            private global::System.Data.DataColumn columnMonto;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public ReporteFacturasDataTable() {
@@ -1474,6 +1476,14 @@ namespace AmorPropio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MontoColumn {
+                get {
+                    return this.columnMonto;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1509,7 +1519,7 @@ namespace AmorPropio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ReporteFacturasRow AddReporteFacturasRow(string NumeroFactura, string Cedula, string Nombre, string PrimerApellido, string SegundoApellido, string Direccion, string Telefono, string Correo, string Tipoventa) {
+            public ReporteFacturasRow AddReporteFacturasRow(string NumeroFactura, string Cedula, string Nombre, string PrimerApellido, string SegundoApellido, string Direccion, string Telefono, string Correo, string Tipoventa, string Monto) {
                 ReporteFacturasRow rowReporteFacturasRow = ((ReporteFacturasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NumeroFactura,
@@ -1520,7 +1530,8 @@ namespace AmorPropio {
                         Direccion,
                         Telefono,
                         Correo,
-                        Tipoventa};
+                        Tipoventa,
+                        Monto};
                 rowReporteFacturasRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowReporteFacturasRow);
                 return rowReporteFacturasRow;
@@ -1552,6 +1563,7 @@ namespace AmorPropio {
                 this.columnTelefono = base.Columns["Telefono"];
                 this.columnCorreo = base.Columns["Correo"];
                 this.columnTipoventa = base.Columns["Tipoventa"];
+                this.columnMonto = base.Columns["Monto"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1575,6 +1587,8 @@ namespace AmorPropio {
                 base.Columns.Add(this.columnCorreo);
                 this.columnTipoventa = new global::System.Data.DataColumn("Tipoventa", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTipoventa);
+                this.columnMonto = new global::System.Data.DataColumn("Monto", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMonto);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2967,6 +2981,22 @@ namespace AmorPropio {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string Monto {
+                get {
+                    try {
+                        return ((string)(this[this.tableReporteFacturas.MontoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Monto\' de la tabla \'ReporteFacturas\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableReporteFacturas.MontoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsNumeroFacturaNull() {
                 return this.IsNull(this.tableReporteFacturas.NumeroFacturaColumn);
             }
@@ -3071,6 +3101,18 @@ namespace AmorPropio {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTipoventaNull() {
                 this[this.tableReporteFacturas.TipoventaColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsMontoNull() {
+                return this.IsNull(this.tableReporteFacturas.MontoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetMontoNull() {
+                this[this.tableReporteFacturas.MontoColumn] = global::System.Convert.DBNull;
             }
         }
         
