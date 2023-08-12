@@ -612,7 +612,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Costo.Value</Value>
+                                  <Value>="₡"&amp;Fields!Costo.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
