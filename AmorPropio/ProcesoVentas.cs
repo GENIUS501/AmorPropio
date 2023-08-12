@@ -245,7 +245,7 @@ namespace AmorPropio
                         frm.Total = Total.ToString();
                         frm.Cliente = this.lbl_cliente.Text;
                         frm.Cantidad_Lineas = linea.ToString();
-                        frm.TipoPago = this.cbo_tipo_pago.SelectedItem.ToString();
+                        frm.TipoPago = Entidad_Ventas.Tipo_pago;
                         frm.MdiParent = this.MdiParent;
                         frm.Show();
                         ProcesoVentas_Load(null, null);
@@ -266,10 +266,6 @@ namespace AmorPropio
                     if (lst_productos.Items.Count == 0)
                     {
                         MessageBox.Show("Debe agregar productos!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    if (this.txt_impuesto.Text != "")
-                    {
-                        MessageBox.Show("Debe agregar el impuesto!!!", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
             }
