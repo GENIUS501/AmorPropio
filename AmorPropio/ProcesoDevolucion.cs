@@ -30,7 +30,17 @@ namespace AmorPropio
             try
             {
                 NDevoluciones Negocios = new NDevoluciones();
-                this.dat_principal.DataSource = Negocios.Mostrar();
+                var Datasource = Negocios.Mostrar().Select(Item => new
+                {
+                    CantidadProducto = Item.CantidadProducto,
+                    ID_Cliente = Item.ID_Cliente,
+                    Total = "₡"+Item.Total,
+                    ID_Usuario = Item.ID_Usuario,
+                    Tipo_pago = Item.Tipo_pago,
+                    Fecha_venta = Item.Fecha_venta,
+                    Numero_factura = Item.Numero_factura
+                }).ToList();
+                this.dat_principal.DataSource = Datasource;
                 valorcelda = -1;
                 ID_Cliente = -1;
                 Cantidad_Producto = -1;
@@ -107,7 +117,16 @@ namespace AmorPropio
                 if (this.txt_buscar_cedula.Text != "")
                 {
                     NDevoluciones Negocios = new NDevoluciones();
-                    this.dat_principal.DataSource = Negocios.MostrarIdentificacion(this.txt_buscar_cedula.Text);
+                    var Datasource = Negocios.MostrarIdentificacion(this.txt_buscar_cedula.Text).Select(Item => new {
+                        CantidadProducto = Item.CantidadProducto,
+                        ID_Cliente = Item.ID_Cliente,
+                        Total = "₡" + Item.Total,
+                        ID_Usuario = Item.ID_Usuario,
+                        Tipo_pago = Item.Tipo_pago,
+                        Fecha_venta = Item.Fecha_venta,
+                        Numero_factura = Item.Numero_factura
+                    }).ToList();
+                    this.dat_principal.DataSource = Datasource;
                 }
             }
             catch (Exception ex)
@@ -123,7 +142,17 @@ namespace AmorPropio
                 if (this.txt_id.Text != "")
                 {
                     NDevoluciones Negocios = new NDevoluciones();
-                    this.dat_principal.DataSource = Negocios.MostrarId(int.Parse(this.txt_id.Text));
+                    var Data = Negocios.MostrarId(int.Parse(this.txt_id.Text)).Select(Item => new
+                    {
+                        CantidadProducto = Item.CantidadProducto,
+                        ID_Cliente = Item.ID_Cliente,
+                        Total = "₡" + Item.Total,
+                        ID_Usuario = Item.ID_Usuario,
+                        Tipo_pago = Item.Tipo_pago,
+                        Fecha_venta = Item.Fecha_venta,
+                        Numero_factura = Item.Numero_factura
+                    }).ToList();
+                    this.dat_principal.DataSource = Data;
                 }
             }
             catch (Exception ex)

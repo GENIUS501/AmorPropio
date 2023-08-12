@@ -245,6 +245,7 @@ namespace AmorPropio
                         frm.Total = Total.ToString();
                         frm.Cliente = this.lbl_cliente.Text;
                         frm.Cantidad_Lineas = linea.ToString();
+                        frm.TipoPago = this.cbo_tipo_pago.SelectedItem.ToString();
                         frm.MdiParent = this.MdiParent;
                         frm.Show();
                         ProcesoVentas_Load(null, null);

@@ -58,12 +58,14 @@
             this.txt_impuesto = new System.Windows.Forms.TextBox();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAceptar = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.grp_venta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dat_resultado)).BeginInit();
             this.SuspendLayout();
             // 
             // grp_venta
             // 
+            this.grp_venta.Controls.Add(this.label10);
             this.grp_venta.Controls.Add(this.cbo_tipo_pago);
             this.grp_venta.Controls.Add(this.label9);
             this.grp_venta.Controls.Add(this.txt_codigo);
@@ -348,6 +350,15 @@
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btn_aceptar_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(432, 388);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(15, 13);
+            this.label10.TabIndex = 65;
+            this.label10.Text = "₡";
+            // 
             // ProcesoVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -396,5 +407,6 @@
         private System.Windows.Forms.MaskedTextBox txt_codigo;
         private System.Windows.Forms.ComboBox cbo_tipo_pago;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }

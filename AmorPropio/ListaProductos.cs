@@ -27,7 +27,15 @@ namespace AmorPropio
             try
             {
                 NProductos Negocios = new NProductos();
-                dat_principal.DataSource = Negocios.Mostrar();
+                dat_principal.DataSource = Negocios.Mostrar().Select(x=> new {
+                    ID_Producto = x.ID_Producto,
+                    ID_Tipo_Producto = x.ID_Tipo_Producto,
+                    Nombre = x.Nombre,
+                    Descripcion = x.Descripcion,
+                    Precio = "₡"+x.Precio,
+                    Cantidad = x.Cantidad,
+                    Imagen = x.Imagen,
+                }).ToList();
                 valorcelda = -1;
                 this.dat_principal.ReadOnly = true;
                 NRoles NegociosRoles = new NRoles();
@@ -199,7 +207,15 @@ namespace AmorPropio
                 if (this.txt_buscar_codigo.Text != "")
                 {
                     NProductos Negocios = new NProductos();
-                    this.dat_principal.DataSource = Negocios.Mostrar().Where(x => x.ID_Producto == int.Parse(this.txt_buscar_codigo.Text)).ToList();
+                    this.dat_principal.DataSource = Negocios.Mostrar().Select(x => new {
+                        ID_Producto = x.ID_Producto,
+                        ID_Tipo_Producto = x.ID_Tipo_Producto,
+                        Nombre = x.Nombre,
+                        Descripcion = x.Descripcion,
+                        Precio = "₡" + x.Precio,
+                        Cantidad = x.Cantidad,
+                        Imagen = x.Imagen,
+                    }).Where(x => x.ID_Producto == int.Parse(this.txt_buscar_codigo.Text)).ToList();
                 }
             }
             catch (Exception ex)
@@ -215,7 +231,15 @@ namespace AmorPropio
                 if (this.txt_nombre.Text != "")
                 {
                     NProductos Negocios = new NProductos();
-                    this.dat_principal.DataSource = Negocios.Mostrar().Where(x => x.Nombre.Contains(this.txt_nombre.Text)).ToList();
+                    this.dat_principal.DataSource = Negocios.Mostrar().Select(x => new {
+                        ID_Producto = x.ID_Producto,
+                        ID_Tipo_Producto = x.ID_Tipo_Producto,
+                        Nombre = x.Nombre,
+                        Descripcion = x.Descripcion,
+                        Precio = "₡" + x.Precio,
+                        Cantidad = x.Cantidad,
+                        Imagen = x.Imagen,
+                    }).Where(x => x.Nombre.Contains(this.txt_nombre.Text)).ToList();
                 }
             }
             catch (Exception ex)

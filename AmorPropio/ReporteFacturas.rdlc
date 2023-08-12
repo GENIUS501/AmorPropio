@@ -421,7 +421,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!Monto.Value</Value>
+                                  <Value>="₡"&amp;Fields!Monto.Value</Value>
                                   <Style />
                                 </TextRun>
                               </TextRuns>
@@ -440,6 +440,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>

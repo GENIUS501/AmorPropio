@@ -52,6 +52,7 @@
             this.btnAceptar = new System.Windows.Forms.Button();
             this.dlgImagen = new System.Windows.Forms.OpenFileDialog();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label6 = new System.Windows.Forms.Label();
             this.Grp_Productos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImgProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,6 +75,7 @@
             // 
             // Grp_Productos
             // 
+            this.Grp_Productos.Controls.Add(this.label6);
             this.Grp_Productos.Controls.Add(this.txtPrecio);
             this.Grp_Productos.Controls.Add(this.label4);
             this.Grp_Productos.Controls.Add(this.txtCantidad);
@@ -100,10 +102,10 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(9, 146);
+            this.txtPrecio.Location = new System.Drawing.Point(34, 146);
             this.txtPrecio.Mask = "00000000";
             this.txtPrecio.Name = "txtPrecio";
-            this.txtPrecio.Size = new System.Drawing.Size(164, 20);
+            this.txtPrecio.Size = new System.Drawing.Size(141, 20);
             this.txtPrecio.TabIndex = 84;
             // 
             // label4
@@ -271,6 +273,15 @@
             // 
             this.errorProvider1.ContainerControl = this;
             // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(13, 149);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(15, 13);
+            this.label6.TabIndex = 85;
+            this.label6.Text = "₡";
+            // 
             // Mantenimiento_Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -317,5 +328,6 @@
         private System.Windows.Forms.MaskedTextBox txtCantidad;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ErrorProvider errorProvider1;
+        private System.Windows.Forms.Label label6;
     }
 }
