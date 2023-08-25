@@ -54,15 +54,15 @@ namespace AmorPropio
         {
             try
             {
-                if (this.dat_principal.Rows[e.RowIndex].Cells[0].Value.ToString() == "")
+                if (this.dat_principal.Rows[e.RowIndex].Cells[6].Value.ToString() == "")
                 {
                     ProcesoDevolucion_Load(null, null);
                 }
                 else
                 {
-                    valorcelda = int.Parse(this.dat_principal.Rows[e.RowIndex].Cells[3].Value.ToString());
+                    valorcelda = int.Parse(this.dat_principal.Rows[e.RowIndex].Cells[6].Value.ToString());
                     ID_Cliente = int.Parse(this.dat_principal.Rows[e.RowIndex].Cells[1].Value.ToString());
-                    Cantidad_Producto = int.Parse(this.dat_principal.Rows[e.RowIndex].Cells[4].Value.ToString());
+                    Cantidad_Producto = int.Parse(this.dat_principal.Rows[e.RowIndex].Cells[0].Value.ToString());
                 }
             }
             catch (Exception ex)
