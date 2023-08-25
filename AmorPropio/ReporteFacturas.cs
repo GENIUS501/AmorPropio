@@ -110,7 +110,7 @@ namespace AmorPropio
                         Correo = NegociosClientes.Mostrar().Where(c => c.ID_Cliente == x.ID_Cliente).FirstOrDefault().Correo,
                         TipoVenta = x.Tipo_pago,
                         Monto = x.Total
-                    }).Where(d => d.Nombre.Contains(this.txt_buscar_cedula.Text)).ToList();
+                    }).Where(d => d.Nombre.Contains(this.txt_nombre.Text)).ToList();
                     ReportDataSource Rds = new ReportDataSource("DataSet1", datasource);
                     this.reportViewer1.LocalReport.DataSources.Clear();
                     this.reportViewer1.LocalReport.DataSources.Add(Rds);
